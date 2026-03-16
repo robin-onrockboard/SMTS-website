@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-<head><meta name="google-site-verification" content="k_paGm7JEouWYELqp_75KRvt6W3tfXMDrvqL54cTl8Y" />
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SMTS — Smart Move Trade Solutions | 美国东海岸海外仓履约中心</title>
+<title>SMTS — Smart Move Trade Solutions | 美国东海岸海外仓 · 跨境履约中心</title>
+
+<!-- ── SEO Meta ── -->
+<meta name="description" content="SMTS（Smart Move Trade Solutions）位于美国波士顿，专为Temu、Shein、TikTok Shop跨境卖家提供美国本土仓储、一件代发、Pick&Pack、退货处理等服务。20,000 sqft仓库，25人本地团队，日处理20,000+单。">
+<meta name="keywords" content="美国海外仓,海外仓,跨境电商仓储,Temu海外仓,Shein海外仓,TikTok Shop海外仓,美国仓储,波士顿仓库,一件代发,海外仓履约,East Coast Fulfillment,SMTS,Smart Move Trade Solutions">
+<meta name="author" content="Smart Move Trade Solutions Inc">
+<meta name="robots" content="index, follow">
+<meta name="language" content="zh-CN, en">
+<link rel="canonical" href="https://www.smts-us.com/">
+
+<!-- ── Open Graph (微信/社交分享) ── -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://www.smts-us.com/">
+<meta property="og:title" content="SMTS — 美国东海岸跨境海外仓 · 专为Temu/Shein/TikTok卖家">
+<meta property="og:description" content="位于美国波士顿，20,000 sqft仓库，25人本地团队，日处理20,000+单。支持USPS、UPS、FedEx、GOFO、UniUni五大承运商，对接领星/极风WMS系统。">
+<meta property="og:image" content="https://www.smts-us.com/og-image.png">
+<meta property="og:site_name" content="SMTS Smart Move Trade Solutions">
+<meta property="og:locale" content="zh_CN">
+
+<!-- ── Twitter Card ── -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="SMTS — 美国东海岸跨境海外仓">
+<meta name="twitter:description" content="专为Temu、Shein、TikTok Shop卖家提供美国本土仓储履约服务。波士顿仓库，20,000 sqft，日处理20,000+单。">
+<meta name="twitter:image" content="https://www.smts-us.com/og-image.png">
+
+<!-- ── Structured Data (Google 富摘要) ── -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Smart Move Trade Solutions Inc",
+  "alternateName": "SMTS",
+  "description": "美国东海岸跨境供应链服务公司，专为中国跨境电商卖家提供美国本土仓储、一件代发、Pick&Pack、退货处理等履约服务。",
+  "url": "https://www.smts-us.com",
+  "email": "smartmovetradesolutions@gmail.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Boston",
+    "addressRegion": "MA",
+    "addressCountry": "US"
+  },
+  "areaServed": {
+    "@type": "Country",
+    "name": "United States"
+  },
+  "serviceType": ["海外仓储", "跨境电商履约", "一件代发", "退货处理", "美国本土配送"],
+  "knowsLanguage": ["zh", "en"],
+  "sameAs": []
+}
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
@@ -876,10 +925,10 @@
   }
   .reveal {
     opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.7s ease, transform 0.7s ease;
+    transform: translateY(24px);
+    transition: opacity 0.65s ease, transform 0.65s ease;
   }
-  .reveal.visible { opacity: 1; transform: translateY(0); }
+  .reveal.visible { opacity: 1 !important; transform: translateY(0) !important; }
 
   /* ── RESPONSIVE ── */
   @media (max-width: 960px) {
@@ -900,6 +949,146 @@
     .contact-inner { grid-template-columns: 1fr; }
     .form-grid { grid-template-columns: 1fr; }
     footer { flex-direction: column; gap: 16px; text-align: center; padding: 36px 24px; }
+  }
+  /* ── SERVICE NAV ── */
+  .service-nav { background:#fff; padding:80px 72px; }
+  .service-nav-grid { display:grid; grid-template-columns:repeat(4,1fr); gap:24px; }
+  .snav-card {
+    background:var(--paper); border:1px solid var(--border);
+    border-radius:16px; padding:36px 28px 32px;
+    display:flex; flex-direction:column;
+    text-decoration:none; color:var(--ink); position:relative;
+    overflow:hidden; cursor:pointer;
+    transition:transform 0.3s cubic-bezier(.16,1,.3,1), box-shadow 0.3s, border-color 0.3s;
+  }
+  .snav-card::before {
+    content:''; position:absolute; bottom:0; left:0; right:0; height:4px;
+    background:linear-gradient(90deg,var(--accent),#4d8aff);
+    transform:scaleX(0); transform-origin:left;
+    transition:transform 0.4s cubic-bezier(.16,1,.3,1);
+    border-radius:0 0 16px 16px;
+  }
+  .snav-card:hover { transform:translateY(-6px); box-shadow:0 20px 48px rgba(26,92,255,.12); border-color:rgba(26,92,255,.2); }
+  .snav-card:hover::before { transform:scaleX(1); }
+  .snav-icon-wrap {
+    width:64px; height:64px;
+    background:linear-gradient(135deg,rgba(26,92,255,.1),rgba(26,92,255,.05));
+    border-radius:16px; display:flex; align-items:center; justify-content:center;
+    margin-bottom:22px; flex-shrink:0;
+    transition:background 0.3s;
+  }
+  .snav-card:hover .snav-icon-wrap { background:linear-gradient(135deg,rgba(26,92,255,.18),rgba(26,92,255,.08)); }
+  .snav-icon-wrap svg { width:32px; height:32px; }
+  .snav-title { font-family:var(--serif); font-size:1.1rem; font-weight:700; margin-bottom:12px; letter-spacing:-.01em; }
+  .snav-desc { font-size:0.82rem; color:var(--muted); line-height:1.75; flex:1; }
+  .snav-arrow {
+    display:inline-flex; align-items:center; gap:6px; margin-top:20px;
+    font-family:var(--mono); font-size:0.72rem; letter-spacing:.08em;
+    color:var(--accent); text-transform:uppercase;
+    opacity:0; transform:translateX(-8px);
+    transition:opacity .3s, transform .3s;
+  }
+  .snav-arrow::after { content:'→'; }
+  .snav-card:hover .snav-arrow { opacity:1; transform:translateX(0); }
+
+  /* ── SERVICE DETAIL PAGES ── */
+  .svc-page {
+    display:none; position:fixed; inset:0; z-index:200;
+    background:#fff; overflow-y:auto;
+    animation:svcSlideUp .4s cubic-bezier(.16,1,.3,1);
+  }
+  .svc-page.active { display:block; }
+  @keyframes svcSlideUp {
+    from { opacity:0; transform:translateY(40px); }
+    to   { opacity:1; transform:translateY(0); }
+  }
+  .svc-page-header {
+    background:var(--ink); padding:24px 72px;
+    display:flex; align-items:center; gap:20px;
+    position:sticky; top:0; z-index:10;
+  }
+  .svc-back-btn {
+    display:flex; align-items:center; gap:8px;
+    background:rgba(255,255,255,.1); border:1px solid rgba(255,255,255,.15);
+    color:#fff; font-family:var(--mono); font-size:.75rem; letter-spacing:.08em;
+    padding:8px 18px; border-radius:6px; cursor:pointer;
+    transition:background .2s;
+  }
+  .svc-back-btn:hover { background:rgba(255,255,255,.18); }
+  .svc-page-title { font-family:var(--serif); font-size:1.3rem; font-weight:900; color:#fff; letter-spacing:-.02em; }
+  .svc-page-body { padding:64px 72px; max-width:1060px; margin:0 auto; }
+  .svc-hero {
+    display:grid; grid-template-columns:1fr 1fr; gap:64px;
+    align-items:center; margin-bottom:64px; padding-bottom:64px;
+    border-bottom:1px solid var(--border);
+  }
+  .svc-hero-text .section-tag { margin-bottom:14px; }
+  .svc-hero-text h1 {
+    font-family:var(--serif); font-size:2.2rem; font-weight:900;
+    letter-spacing:-.025em; line-height:1.1; margin-bottom:18px;
+  }
+  .svc-hero-text h1 span { color:var(--accent); }
+  .svc-hero-text p { font-size:.92rem; color:var(--muted); line-height:1.85; margin-bottom:24px; }
+  .svc-hero-visual {
+    background:linear-gradient(135deg,var(--ink) 0%,#1a2a4a 100%);
+    border-radius:16px; padding:36px 32px; display:flex; flex-direction:column; gap:14px;
+  }
+  .svc-stat-row { display:flex; gap:14px; }
+  .svc-stat {
+    background:rgba(255,255,255,.06); border:1px solid rgba(255,255,255,.08);
+    border-radius:10px; padding:18px 16px; flex:1;
+  }
+  .svc-stat-val { font-family:var(--mono); font-size:1.5rem; color:#fff; font-weight:500; line-height:1; margin-bottom:6px; }
+  .svc-stat-val span { color:var(--accent); }
+  .svc-stat-key { font-size:.72rem; color:rgba(255,255,255,.45); letter-spacing:.04em; }
+  .svc-features-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; margin-bottom:48px; }
+  .svc-feat {
+    background:var(--paper); border:1px solid var(--border); border-radius:12px;
+    padding:26px 22px; transition:border-color .2s, transform .2s;
+  }
+  .svc-feat:hover { border-color:var(--accent); transform:translateY(-3px); }
+  .svc-feat-icon { font-size:1.7rem; margin-bottom:12px; }
+  .svc-feat-title { font-family:var(--serif); font-size:.95rem; font-weight:700; margin-bottom:8px; }
+  .svc-feat-desc { font-size:.82rem; color:var(--muted); line-height:1.7; }
+  .svc-carriers {
+    background:var(--ink); border-radius:14px; padding:28px 32px;
+    display:flex; align-items:center; gap:32px; flex-wrap:wrap; margin-bottom:40px;
+  }
+  .svc-carriers-label { font-family:var(--mono); font-size:.68rem; letter-spacing:.12em; color:rgba(255,255,255,.4); text-transform:uppercase; white-space:nowrap; }
+  .svc-carrier-tags { display:flex; gap:8px; flex-wrap:wrap; }
+  .svc-carrier-tag {
+    background:rgba(255,255,255,.07); border:1px solid rgba(255,255,255,.12);
+    color:rgba(255,255,255,.85); font-family:var(--mono); font-size:.72rem;
+    letter-spacing:.08em; padding:6px 16px; border-radius:6px;
+  }
+  .svc-cta-row {
+    background:linear-gradient(135deg,var(--accent) 0%,#0044dd 100%);
+    border-radius:16px; padding:40px 44px;
+    display:flex; align-items:center; justify-content:space-between; gap:28px;
+  }
+  .svc-cta-row h3 { font-family:var(--serif); font-size:1.5rem; font-weight:900; color:#fff; letter-spacing:-.02em; line-height:1.2; }
+  .svc-cta-row p { color:rgba(255,255,255,.7); font-size:.88rem; margin-top:8px; }
+  .btn-svc-contact {
+    background:#fff; color:var(--accent); padding:13px 32px;
+    font-size:.875rem; font-weight:700; letter-spacing:.05em;
+    border:none; border-radius:8px; cursor:pointer; text-decoration:none;
+    white-space:nowrap; display:inline-block;
+    transition:transform .2s, box-shadow .2s;
+  }
+  .btn-svc-contact:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,.15); }
+
+  @media (max-width:960px) {
+    .service-nav { padding:64px 24px; }
+    .service-nav-grid { grid-template-columns:repeat(2,1fr); gap:16px; }
+    .svc-page-header { padding:18px 24px; }
+    .svc-page-body { padding:36px 24px; }
+    .svc-hero { grid-template-columns:1fr; gap:32px; }
+    .svc-features-grid { grid-template-columns:1fr 1fr; }
+    .svc-cta-row { flex-direction:column; }
+  }
+  @media (max-width:600px) {
+    .service-nav-grid { grid-template-columns:1fr; }
+    .svc-features-grid { grid-template-columns:1fr; }
   }
 </style>
 </head>
@@ -998,6 +1187,244 @@
     <span class="marquee-item">全美配送覆盖</span>
     <span class="marquee-item">退货处理</span>
     <span class="marquee-item">质检换标</span>
+  </div>
+</div>
+
+<!-- SERVICE NAV (谷仓风格 4卡片) -->
+<section class="service-nav" id="service-overview">
+  <div style="text-align:center;margin-bottom:52px" class="reveal">
+    <div class="section-tag" style="justify-content:center;margin-bottom:12px">
+      <span style="width:18px;height:1px;background:var(--accent);display:inline-block;margin-right:10px"></span>核心业务
+    </div>
+    <h2 class="section-h2" style="text-align:center">SMTS 服务体系</h2>
+    <p style="text-align:center;color:var(--muted);font-size:.95rem;max-width:540px;margin:12px auto 0;line-height:1.8">
+      为中国跨境卖家提供美国本土全链路履约解决方案，点击了解各项服务详情
+    </p>
+  </div>
+  <div class="service-nav-grid reveal">
+    <div class="snav-card" onclick="openSvcPage('svc-freight')">
+      <div class="snav-icon-wrap">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="2" y="10" width="20" height="12" rx="2" stroke="#1a5cff" stroke-width="1.8"/>
+          <path d="M22 14h4l4 4v4h-8V14z" stroke="#1a5cff" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="8" cy="24" r="2.5" stroke="#1a5cff" stroke-width="1.8"/>
+          <circle cx="24" cy="24" r="2.5" stroke="#1a5cff" stroke-width="1.8"/>
+          <path d="M6 10V7a1 1 0 011-1h8" stroke="#1a5cff" stroke-width="1.8" stroke-linecap="round"/>
+        </svg>
+      </div>
+      <div class="snav-title">头程干线服务</div>
+      <div class="snav-desc">整合优质海运、空运和快递等国际干线运力资源，为客户提供港到仓、仓到仓的一站式送仓服务。</div>
+      <div class="snav-arrow">了解更多</div>
+    </div>
+    <div class="snav-card" onclick="openSvcPage('svc-warehouse')">
+      <div class="snav-icon-wrap">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M4 14L16 4l12 10v14a2 2 0 01-2 2H6a2 2 0 01-2-2V14z" stroke="#1a5cff" stroke-width="1.8" stroke-linejoin="round"/>
+          <path d="M12 30V20h8v10" stroke="#1a5cff" stroke-width="1.8" stroke-linejoin="round"/>
+          <rect x="10" y="12" width="4" height="4" rx="0.5" stroke="#1a5cff" stroke-width="1.4"/>
+          <rect x="18" y="12" width="4" height="4" rx="0.5" stroke="#1a5cff" stroke-width="1.4"/>
+        </svg>
+      </div>
+      <div class="snav-title">海外仓储服务</div>
+      <div class="snav-desc">20,000 sqft 波士顿仓库，25人本地团队，入库及时率≥99.9%，为客户提供标准仓配及定制化解决方案。</div>
+      <div class="snav-arrow">了解更多</div>
+    </div>
+    <div class="snav-card" onclick="openSvcPage('svc-dropship')">
+      <div class="snav-icon-wrap">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect x="3" y="8" width="14" height="14" rx="2" stroke="#1a5cff" stroke-width="1.8"/>
+          <path d="M17 12h6l4 4v6h-10V12z" stroke="#1a5cff" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="9" cy="25" r="2.2" stroke="#1a5cff" stroke-width="1.8"/>
+          <circle cx="23" cy="25" r="2.2" stroke="#1a5cff" stroke-width="1.8"/>
+          <path d="M9 13l2 2 4-4" stroke="#1a5cff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="snav-title">一件代发服务</div>
+      <div class="snav-desc">以"前置库存+本地服务"，从订单处理到分拣打包到本地配送，一站解决卖家时效、成本、售后难题。</div>
+      <div class="snav-arrow">了解更多</div>
+    </div>
+    <div class="snav-card" onclick="openSvcPage('svc-custom')">
+      <div class="snav-icon-wrap">
+        <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M16 3l3 6h6l-5 4 2 6-6-4-6 4 2-6-5-4h6z" stroke="#1a5cff" stroke-width="1.8" stroke-linejoin="round"/>
+          <circle cx="16" cy="22" r="7" stroke="#1a5cff" stroke-width="1.8"/>
+          <path d="M13 22l2 2 4-4" stroke="#1a5cff" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="snav-title">定制服务和合同物流</div>
+      <div class="snav-desc">基于客户不同行业属性和供应链场景需求，支持"一企一案"式物流解决方案和多品类定制仓服务。</div>
+      <div class="snav-arrow">了解更多</div>
+    </div>
+  </div>
+</section>
+
+<!-- ── SERVICE DETAIL PAGE 1: 头程干线 ── -->
+<div class="svc-page" id="svc-freight">
+  <div class="svc-page-header">
+    <button class="svc-back-btn" onclick="closeSvcPage()">← 返回首页</button>
+    <div class="svc-page-title">头程干线服务</div>
+  </div>
+  <div class="svc-page-body">
+    <div class="svc-hero">
+      <div class="svc-hero-text">
+        <div class="section-tag">Freight · 头程干线</div>
+        <h1>港到仓 · 仓到仓<br><span>一站式送仓</span></h1>
+        <p>整合优质海运、空运和快递等国际干线运力资源，为客户提供从国内港口到美国波士顿仓库的全程送仓服务，全程可视化追踪，安全高效。</p>
+        <a href="#contact" class="btn-primary" onclick="closeSvcPage()" style="display:inline-block;padding:14px 32px;text-decoration:none;border-radius:4px">立即咨询报价</a>
+      </div>
+      <div class="svc-hero-visual">
+        <div class="svc-stat-row">
+          <div class="svc-stat"><div class="svc-stat-val">3<span>种</span></div><div class="svc-stat-key">运输方式覆盖</div></div>
+          <div class="svc-stat"><div class="svc-stat-val">全程<span>追踪</span></div><div class="svc-stat-key">货物可视化管理</div></div>
+        </div>
+        <div class="svc-stat-row">
+          <div class="svc-stat"><div class="svc-stat-val">Boston<span>仓</span></div><div class="svc-stat-key">东海岸直达目的地</div></div>
+          <div class="svc-stat"><div class="svc-stat-val">48<span>h</span></div><div class="svc-stat-key">到仓入库处理</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-features-grid">
+      <div class="svc-feat"><div class="svc-feat-icon">🚢</div><div class="svc-feat-title">海运整柜 / 散货</div><div class="svc-feat-desc">适合大批量货物，成本最优，提供整柜和拼箱服务，从国内主要港口直运波士顿。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">✈️</div><div class="svc-feat-title">国际空运</div><div class="svc-feat-desc">适合紧急补货或高价值轻小件，多航线可选，时效有保障，对接清关全流程。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">📦</div><div class="svc-feat-title">快递专线</div><div class="svc-feat-desc">适合小批量测品或快速补货，提供 DHL / FedEx / UPS 等主流快递渠道对接。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🛃</div><div class="svc-feat-title">清关协助</div><div class="svc-feat-desc">全程协助美国清关，提供报关资料指导，降低清关风险，保障货物顺利入仓。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">📊</div><div class="svc-feat-title">全程可视化追踪</div><div class="svc-feat-desc">货物离港后全程节点更新，到仓后48小时内完成清点验收并同步库存数据。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🔗</div><div class="svc-feat-title">无缝衔接仓储</div><div class="svc-feat-desc">头程到仓后直接进入 SMTS 仓储履约流程，一个系统管理头程信息与库存状态。</div></div>
+    </div>
+    <div class="svc-cta-row">
+      <div><h3>准备好送货到美国了吗？</h3><p>告诉我们你的货量和目的地，我们为你定制最优头程方案。</p></div>
+      <a href="#contact" class="btn-svc-contact" onclick="closeSvcPage()">获取报价 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVICE DETAIL PAGE 2: 海外仓储 ── -->
+<div class="svc-page" id="svc-warehouse">
+  <div class="svc-page-header">
+    <button class="svc-back-btn" onclick="closeSvcPage()">← 返回首页</button>
+    <div class="svc-page-title">海外仓储服务</div>
+  </div>
+  <div class="svc-page-body">
+    <div class="svc-hero">
+      <div class="svc-hero-text">
+        <div class="section-tag">Warehouse · 海外仓储</div>
+        <h1>波士顿仓储<br><span>专业稳定可靠</span></h1>
+        <p>20,000 sqft 专业仓库，25人本地团队，入库及时率≥99.9%，出库及时率≥99.9%。全条码管控，实时库存可视，支持长短期仓储灵活方案。</p>
+        <a href="#contact" class="btn-primary" onclick="closeSvcPage()" style="display:inline-block;padding:14px 32px;text-decoration:none;border-radius:4px">申请入仓合作</a>
+      </div>
+      <div class="svc-hero-visual">
+        <div class="svc-stat-row">
+          <div class="svc-stat"><div class="svc-stat-val">20K<span> sqft</span></div><div class="svc-stat-key">仓库总面积</div></div>
+          <div class="svc-stat"><div class="svc-stat-val">25<span>人</span></div><div class="svc-stat-key">本地专业团队</div></div>
+        </div>
+        <div class="svc-stat-row">
+          <div class="svc-stat"><div class="svc-stat-val">99.9<span>%</span></div><div class="svc-stat-key">入库及时率</div></div>
+          <div class="svc-stat"><div class="svc-stat-val">20K<span>+</span></div><div class="svc-stat-key">日处理订单能力</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-features-grid">
+      <div class="svc-feat"><div class="svc-feat-icon">📥</div><div class="svc-feat-title">收货清点</div><div class="svc-feat-desc">来货卸车后关锁检查，清点托盘和商品数量外观，测量尺寸，分类SKU，录入属性，扫描序列号。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🗄️</div><div class="svc-feat-title">上架存储</div><div class="svc-feat-desc">货物上架后同步更新系统，无缝打通客户/平台系统，客户可透明、精准、自动化管理库存。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">⚙️</div><div class="svc-feat-title">库内服务</div><div class="svc-feat-desc">库内科学分区，为产品适配不同货架，提高库内利用率，降低客户物流成本，保障供应链稳定。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">📊</div><div class="svc-feat-title">实时库存监控</div><div class="svc-feat-desc">在线管理后台，实时查看库存、出入库明细、订单状态，数据透明，一键导出报表。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🔒</div><div class="svc-feat-title">货物安全保障</div><div class="svc-feat-desc">专业安全管理体系，货物全程监控，货物损坏按约赔偿，让你的库存安全放心。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🔗</div><div class="svc-feat-title">WMS 系统对接</div><div class="svc-feat-desc">支持对接领星、极风等主流 WMS 系统，卖家数据无缝衔接，实现全渠道库存统一管理。</div></div>
+    </div>
+    <div class="svc-cta-row">
+      <div><h3>准备好把货存入波士顿了吗？</h3><p>告诉我们你的 SKU 数量和货品类型，我们提供专属仓储方案。</p></div>
+      <a href="#contact" class="btn-svc-contact" onclick="closeSvcPage()">申请入仓 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVICE DETAIL PAGE 3: 一件代发 ── -->
+<div class="svc-page" id="svc-dropship">
+  <div class="svc-page-header">
+    <button class="svc-back-btn" onclick="closeSvcPage()">← 返回首页</button>
+    <div class="svc-page-title">一件代发服务</div>
+  </div>
+  <div class="svc-page-body">
+    <div class="svc-hero">
+      <div class="svc-hero-text">
+        <div class="section-tag">Dropshipping · 一件代发</div>
+        <h1>前置库存<br><span>本地极速发货</span></h1>
+        <p>从订单处理到分拣打包到本地配送，SMTS 全程代劳。你只需专注运营店铺，支持 Temu、Shein、TikTok Shop、Etsy、Shopify 全平台订单自动同步。</p>
+        <a href="#contact" class="btn-primary" onclick="closeSvcPage()" style="display:inline-block;padding:14px 32px;text-decoration:none;border-radius:4px">立即开通代发</a>
+      </div>
+      <div class="svc-hero-visual">
+        <div class="svc-stat-row">
+          <div class="svc-stat"><div class="svc-stat-val">20K<span>+</span></div><div class="svc-stat-key">日处理订单能力</div></div>
+          <div class="svc-stat"><div class="svc-stat-val">5<span>大</span></div><div class="svc-stat-key">承运商网络</div></div>
+        </div>
+        <div class="svc-stat-row">
+          <div class="svc-stat"><div class="svc-stat-val">99.9<span>%</span></div><div class="svc-stat-key">出库准确率</div></div>
+          <div class="svc-stat"><div class="svc-stat-val">全美<span>覆盖</span></div><div class="svc-stat-key">配送范围</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-features-grid">
+      <div class="svc-feat"><div class="svc-feat-icon">🔄</div><div class="svc-feat-title">自动订单同步</div><div class="svc-feat-desc">平台下单即自动触发拣货指令，Temu / Shein / TikTok / Etsy / Shopify 全平台支持。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">📦</div><div class="svc-feat-title">Pick & Pack</div><div class="svc-feat-desc">专业拣货员按订单精准拣货，支持多 SKU 混合包装，自动打印面单，满足各平台合规要求。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🚚</div><div class="svc-feat-title">多承运商派送</div><div class="svc-feat-desc">根据货品重量、目的地和平台要求，智能匹配 USPS / UPS / FedEx / GOFO / UniUni 最优方案。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🏷️</div><div class="svc-feat-title">换标 & 贴标</div><div class="svc-feat-desc">支持条形码替换、产品标签定制，满足各平台合规要求，无需卖家操心平台规则。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🔁</div><div class="svc-feat-title">退货处理</div><div class="svc-feat-desc">美国本土退货直接接收，检测、重新包装后上架二次流通，降低退货损耗成本。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">📱</div><div class="svc-feat-title">实时追踪</div><div class="svc-feat-desc">每个包裹全程可追踪，买家签收后数据自动回传平台，提升店铺评分和复购率。</div></div>
+    </div>
+    <div class="svc-carriers">
+      <div class="svc-carriers-label">支持承运商</div>
+      <div class="svc-carrier-tags">
+        <span class="svc-carrier-tag">USPS</span>
+        <span class="svc-carrier-tag">UPS</span>
+        <span class="svc-carrier-tag">FedEx</span>
+        <span class="svc-carrier-tag">GOFO</span>
+        <span class="svc-carrier-tag">UniUni</span>
+      </div>
+    </div>
+    <div class="svc-cta-row">
+      <div><h3>你的爆款，我们来发货</h3><p>适合 Temu / Shein / TikTok Shop 爆款卖家、独立站运营团队。</p></div>
+      <a href="#contact" class="btn-svc-contact" onclick="closeSvcPage()">开通代发 →</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── SERVICE DETAIL PAGE 4: 定制服务 ── -->
+<div class="svc-page" id="svc-custom">
+  <div class="svc-page-header">
+    <button class="svc-back-btn" onclick="closeSvcPage()">← 返回首页</button>
+    <div class="svc-page-title">定制服务和合同物流</div>
+  </div>
+  <div class="svc-page-body">
+    <div class="svc-hero">
+      <div class="svc-hero-text">
+        <div class="section-tag">Custom Logistics · 定制物流</div>
+        <h1>一企一案<br><span>定制供应链方案</span></h1>
+        <p>基于客户不同行业属性和供应链场景需求，SMTS 提供完全定制化的仓储物流解决方案，支持 B2B / B2C 混合模式，满足品牌出海、大卖家扩张等复杂履约需求。</p>
+        <a href="#contact" class="btn-primary" onclick="closeSvcPage()" style="display:inline-block;padding:14px 32px;text-decoration:none;border-radius:4px">预约方案咨询</a>
+      </div>
+      <div class="svc-hero-visual">
+        <div class="svc-stat-row">
+          <div class="svc-stat"><div class="svc-stat-val">B2B<span>+</span>B2C</div><div class="svc-stat-key">混合业务模式</div></div>
+          <div class="svc-stat"><div class="svc-stat-val">一企<span>一案</span></div><div class="svc-stat-key">完全定制化方案</div></div>
+        </div>
+        <div class="svc-stat-row">
+          <div class="svc-stat"><div class="svc-stat-val">领星<span>&</span>极风</div><div class="svc-stat-key">WMS 系统支持</div></div>
+          <div class="svc-stat"><div class="svc-stat-val">5<span>大</span></div><div class="svc-stat-key">平台系统对接</div></div>
+        </div>
+      </div>
+    </div>
+    <div class="svc-features-grid">
+      <div class="svc-feat"><div class="svc-feat-icon">🏗️</div><div class="svc-feat-title">仓库定制方案</div><div class="svc-feat-desc">根据客户货品类型、SKU 数量、季节性需求，定制专属仓区布局和作业流程，提升仓储效率。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🔗</div><div class="svc-feat-title">系统深度对接</div><div class="svc-feat-desc">支持与客户 ERP / WMS 深度集成，对接领星、极风等主流系统，实现库存、订单、财务数据自动同步。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🏭</div><div class="svc-feat-title">简单组装 & 加工</div><div class="svc-feat-desc">支持产品简单组装、套装搭配、礼品包装等增值服务，满足特殊销售场景需求。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">📋</div><div class="svc-feat-title">合同物流</div><div class="svc-feat-desc">签订长期合作协议，提供稳定仓容保障、优先处理权和专属客服团队，保障旺季不压单。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">📈</div><div class="svc-feat-title">供应链咨询</div><div class="svc-feat-desc">SMTS 团队提供专业供应链优化建议，帮助卖家降低整体物流成本，提升市场竞争力。</div></div>
+      <div class="svc-feat"><div class="svc-feat-icon">🎯</div><div class="svc-feat-title">品牌出海支持</div><div class="svc-feat-desc">为品牌卖家提供专业的美国市场仓储履约支持，助力中国品牌在美国建立稳定的供应链体系。</div></div>
+    </div>
+    <div class="svc-cta-row">
+      <div><h3>有特殊需求？我们为你定制</h3><p>无论是大体量卖家还是有特殊供应链需求的品牌，SMTS 都能提供专属方案。</p></div>
+      <a href="#contact" class="btn-svc-contact" onclick="closeSvcPage()">预约咨询 →</a>
+    </div>
   </div>
 </div>
 
@@ -1304,18 +1731,24 @@
   <div class="section-tag">联系我们</div>
   <h2 class="section-h2 reveal">开始你的第一次咨询</h2>
   <div class="contact-inner">
-    <form class="form-grid reveal" onsubmit="handleSubmit(event)">
+    <form class="form-grid reveal"
+          action="https://formspree.io/f/mpqyjvjj"
+          method="POST"
+          onsubmit="handleSubmit(event)">
+      <!-- Formspree: redirect back to same page after submit -->
+      <input type="hidden" name="_next" value="https://smartmovetradesolutions.org/#contact">
+      <input type="hidden" name="_subject" value="【SMTS】新卖家合作申请">
       <div class="form-group">
         <label>您的姓名</label>
-        <input type="text" placeholder="姓名" required>
+        <input type="text" name="姓名" placeholder="姓名" required>
       </div>
       <div class="form-group">
         <label>微信号 / 邮箱</label>
-        <input type="text" placeholder="微信号或 Email" required>
+        <input type="text" name="微信号或邮箱" placeholder="微信号或 Email" required>
       </div>
       <div class="form-group">
         <label>主营平台</label>
-        <select>
+        <select name="主营平台">
           <option>Temu</option>
           <option>Shein</option>
           <option>TikTok Shop</option>
@@ -1326,7 +1759,7 @@
       </div>
       <div class="form-group">
         <label>月均订单量</label>
-        <select>
+        <select name="月均订单量">
           <option>1,000 单以下</option>
           <option>1,000 – 5,000 单</option>
           <option>5,000 – 15,000 单</option>
@@ -1335,7 +1768,7 @@
       </div>
       <div class="form-group form-full">
         <label>货品描述（可选）</label>
-        <textarea placeholder="请简单描述您的货品类型、重量、SKU数量，或其他问题…"></textarea>
+        <textarea name="货品描述" placeholder="请简单描述您的货品类型、重量、SKU数量，或其他问题…"></textarea>
       </div>
       <div class="form-full">
         <button type="submit" class="form-submit">提交合作申请</button>
@@ -1348,7 +1781,7 @@
         <div class="info-icon">📧</div>
         <div class="info-text">
           <label>Email</label>
-          <span>smartmovetradesolutions@gmail.com</span>
+          <span><a href="/cdn-cgi/l/email-protection" class="__cf_email__" data-cfemail="2c5f414d5e5841435a49585e4d48495f434059584543425f6c4b414d4540024f4341">[email&#160;protected]</a></span>
         </div>
       </div>
       <div class="info-item">
@@ -1387,29 +1820,70 @@
 
 
 <script>
-// ── SCROLL REVEAL ──
-const reveals = document.querySelectorAll('.reveal');
-const observer = new IntersectionObserver((entries) => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
-reveals.forEach(el => observer.observe(el));
+// ── SCROLL REVEAL (robust - triple trigger) ──
+(function() {
+  function checkReveal() {
+    document.querySelectorAll('.reveal').forEach(function(el) {
+      var rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight + 80) {
+        el.classList.add('visible');
+      }
+    });
+  }
+  checkReveal();
+  window.addEventListener('scroll', checkReveal, { passive: true });
+  window.addEventListener('load', checkReveal);
+  setTimeout(checkReveal, 200);
+  setTimeout(checkReveal, 600);
+  setTimeout(checkReveal, 1200);
+})();
 
-// ── FORM SUBMIT ──
+// ── FORM SUBMIT (Formspree AJAX) ──
 function handleSubmit(e) {
   e.preventDefault();
-  const btn = e.target.querySelector('.form-submit');
-  btn.textContent = '✓ 提交成功！我们会尽快与您联系';
-  btn.style.background = '#22a65a';
+  var form = e.target;
+  var btn = form.querySelector('.form-submit');
+  var originalText = btn.textContent;
+
+  btn.textContent = '提交中...';
   btn.disabled = true;
+  btn.style.background = '#5a6478';
+
+  var data = new FormData(form);
+
+  fetch('https://formspree.io/f/mpqyjvjj', {
+    method: 'POST',
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(function(response) {
+    if (response.ok) {
+      btn.textContent = '✓ 提交成功！我们会尽快与您联系';
+      btn.style.background = '#22a65a';
+      form.reset();
+    } else {
+      btn.textContent = '提交失败，请发邮件至 smartmovetradesolutions@gmail.com';
+      btn.style.background = '#e84c1e';
+      btn.disabled = false;
+    }
+  })
+  .catch(function() {
+    btn.textContent = '网络错误，请直接发邮件联系我们';
+    btn.style.background = '#e84c1e';
+    btn.disabled = false;
+  });
 }
 
 // ── USA MAP via Canvas (Albers Equal-Area Conic Projection) ──
 (function() {
-  const canvas = document.getElementById('usaCanvas');
-  if (!canvas) return;
-  const W = 460, H = 290;
-  canvas.width = W; canvas.height = H;
-  const ctx = canvas.getContext('2d');
+  function initMap() {
+    var canvas = document.getElementById('usaCanvas');
+    if (!canvas) return;
+    var W = 420, H = 265;
+    canvas.width = W;
+    canvas.height = H;
+    canvas.style.display = 'block';
+    var ctx = canvas.getContext('2d');
 
   function project(lon, lat) {
     const phi1 = 29.5 * Math.PI/180, phi2 = 45.5 * Math.PI/180;
@@ -1630,16 +2104,46 @@ function handleSubmit(e) {
     ctx.beginPath(); ctx.ellipse(35, 28, 28, 13, -0.2, 0, Math.PI*2);
     ctx.fillStyle = 'rgba(26,92,255,0.18)'; ctx.fill();
     ctx.strokeStyle = 'rgba(255,255,255,0.22)'; ctx.lineWidth = 2.5; ctx.stroke();
-    ctx.beginPath(); ctx.ellipse(88, 24, 18, 9, -0.1, 0, Math.PI*2);
+    ctx.beginPath(); ctx.ellipse(85, 18, 18, 8, 0.1, 0, Math.PI*2);
     ctx.fill(); ctx.stroke();
     ctx.font = '17px monospace';
     ctx.fillStyle = 'rgba(255,255,255,0.3)';
-    ctx.fillText('HI', 35, 55);
+    ctx.fillText('HI', 22, 52);
     ctx.restore();
   }
 
+  // Call drawMap which is defined inside initMap scope above
   drawMap();
+
+  } // end initMap
+
+  // Execute after DOM ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initMap);
+  } else {
+    initMap();
+  }
+  window.addEventListener('load', function() {
+    var c = document.getElementById('usaCanvas');
+    if (c && c.width === 0) initMap();
+  });
 })();
+
+// ── SERVICE PAGE NAVIGATION ──
+function openSvcPage(id) {
+  document.querySelectorAll('.svc-page').forEach(p => p.classList.remove('active'));
+  const page = document.getElementById(id);
+  if (page) {
+    page.classList.add('active');
+    page.scrollTop = 0;
+    document.body.style.overflow = 'hidden';
+  }
+}
+function closeSvcPage() {
+  document.querySelectorAll('.svc-page').forEach(p => p.classList.remove('active'));
+  document.body.style.overflow = '';
+}
+document.addEventListener('keydown', e => { if (e.key === 'Escape') closeSvcPage(); });
 </script>
 </body>
 </html>
