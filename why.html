@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>为什么选择 SMTS — Smart Move Trade Solutions</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c1220;--paper:#f4f6fa;--accent:#1a5cff;--muted:#5a6478;--border:rgba(12,18,32,0.1);--serif:'Noto Serif SC',serif;--sans:'Noto Sans SC',sans-serif;--mono:'DM Mono',monospace;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}body{background:#fff;color:var(--ink);font-family:var(--sans);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;flex-direction:column;gap:1px;text-decoration:none;}.nav-logo-main{font-family:var(--mono);font-size:1.2rem;font-weight:500;letter-spacing:0.12em;color:var(--ink);}.nav-logo-main span{color:var(--accent);}.nav-logo-sub{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:28px;align-items:center;}.nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}.nav-links a:hover{color:var(--ink);}.nav-cta{background:var(--accent)!important;color:#fff!important;padding:10px 24px;border-radius:4px;font-size:0.8rem!important;font-weight:700!important;}
+.page-hero{margin-top:72px;height:320px;background:linear-gradient(135deg,var(--ink) 0%,#0d2044 60%,#1a3a6e 100%);display:flex;align-items:center;padding:0 72px;position:relative;overflow:hidden;}
+.page-hero::before{content:'';position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 48px),repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 48px);}
+.page-hero::after{content:'';position:absolute;right:-80px;top:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(26,92,255,.2) 0%,transparent 65%);}
+.hero-content{position:relative;z-index:1;}.hero-tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;color:rgba(26,92,255,.9);text-transform:uppercase;margin-bottom:14px;}
+.hero-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3.2rem);font-weight:900;color:#fff;letter-spacing:-.025em;line-height:1.1;margin-bottom:14px;}.hero-title span{color:var(--accent);}
+.hero-sub{font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.75;max-width:520px;}
+.section-tag{font-family:var(--mono);font-size:.68rem;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.section-tag::before{content:'';display:block;width:18px;height:1px;background:var(--accent);}
+.section-h2{font-family:var(--serif);font-size:clamp(1.8rem,3vw,2.6rem);font-weight:900;letter-spacing:-.025em;line-height:1.12;margin-bottom:14px;}
+.section-lead{font-size:.95rem;color:var(--muted);line-height:1.85;max-width:560px;margin-bottom:48px;}
+.page-section{padding:80px 72px;}.page-section.dark{background:var(--ink);}.page-section.alt{background:var(--paper);}
+/* Advantage grid */
+.adv-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;}
+.adv-card{background:var(--paper);border:1px solid var(--border);border-radius:14px;padding:36px 28px;transition:border-color .2s,transform .2s,box-shadow .2s;}
+.adv-card:hover{border-color:var(--accent);transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,92,255,.1);}
+.adv-num{font-family:var(--mono);font-size:.62rem;color:var(--accent);letter-spacing:.12em;margin-bottom:16px;}
+.adv-icon{font-size:2rem;margin-bottom:14px;display:block;}
+.adv-title{font-family:var(--serif);font-size:1.15rem;font-weight:700;margin-bottom:10px;letter-spacing:-.01em;}
+.adv-desc{font-size:.83rem;color:var(--muted);line-height:1.75;}
+.adv-highlight{display:inline-block;background:rgba(26,92,255,.08);color:var(--accent);font-family:var(--mono);font-size:.63rem;letter-spacing:.08em;padding:4px 10px;border-radius:3px;margin-top:14px;}
+/* Comparison table */
+.compare-table{width:100%;border-collapse:collapse;margin-top:0;}
+.compare-table th{background:var(--ink);color:#fff;padding:16px 20px;text-align:left;font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;}
+.compare-table th:first-child{border-radius:8px 0 0 0;}.compare-table th:last-child{border-radius:0 8px 0 0;}
+.compare-table td{padding:16px 20px;border-bottom:1px solid var(--border);font-size:.88rem;}
+.compare-table tr:last-child td{border-bottom:none;}
+.compare-table tr:hover td{background:rgba(26,92,255,.03);}
+.check{color:#22a65a;font-weight:700;font-size:1rem;}.cross{color:#e84c1e;font-weight:700;}
+/* Testimonial style promise block */
+.promise-grid{display:grid;grid-template-columns:1fr 1fr;gap:24px;}
+.promise-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:32px 28px;display:flex;gap:18px;align-items:flex-start;transition:background .3s;}
+.promise-card:hover{background:rgba(26,92,255,.12);}
+.promise-icon{width:44px;height:44px;background:rgba(26,92,255,.15);border:1px solid rgba(26,92,255,.3);border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0;}
+.promise-text h3{font-family:var(--serif);font-size:1.05rem;font-weight:700;color:#fff;margin-bottom:8px;}
+.promise-text p{font-size:.82rem;color:rgba(255,255,255,.5);line-height:1.7;}
+/* CTA */
+.cta-bar{background:linear-gradient(135deg,var(--accent) 0%,#0044dd 100%);padding:48px 72px;display:flex;align-items:center;justify-content:space-between;gap:32px;}
+.cta-bar h3{font-family:var(--serif);font-size:1.8rem;font-weight:900;color:#fff;letter-spacing:-.02em;}
+.cta-bar p{color:rgba(255,255,255,.7);font-size:.9rem;margin-top:8px;}
+.btn-white{background:#fff;color:var(--accent);padding:14px 36px;font-size:.875rem;font-weight:700;border:none;border-radius:6px;cursor:pointer;text-decoration:none;white-space:nowrap;display:inline-block;transition:transform .2s;}
+.btn-white:hover{transform:translateY(-2px);}
+footer{background:var(--ink);padding:0;border-top:1px solid rgba(255,255,255,.06);}
+.footer-main{padding:64px 72px 48px;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:56px;border-bottom:1px solid rgba(255,255,255,.08);}
+.footer-name{font-family:var(--mono);font-size:1.05rem;font-weight:500;color:#fff;letter-spacing:.1em;margin-bottom:8px;}.footer-name span{color:var(--accent);}
+.footer-tagline{font-family:var(--mono);font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.08em;margin-bottom:14px;}
+.footer-desc{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.75;}
+.footer-col-title{font-family:var(--mono);font-size:.68rem;color:rgba(255,255,255,.45);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.footer-links{display:flex;flex-direction:column;gap:10px;}.footer-links a{font-size:.83rem;color:rgba(255,255,255,.5);text-decoration:none;}.footer-links a:hover{color:#fff;}
+.footer-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;}
+.fci-icon{font-size:.85rem;margin-top:2px;flex-shrink:0;}.fci-text{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.55;}.fci-text a{color:var(--accent);text-decoration:none;}
+.footer-bottom{padding:20px 72px;display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-family:var(--mono);font-size:.63rem;color:rgba(255,255,255,.2);letter-spacing:.06em;}
+.footer-bottom-links{display:flex;gap:20px;}.footer-bottom-links a{font-family:var(--mono);font-size:.63rem;color:rgba(255,255,255,.3);text-decoration:none;}.footer-bottom-links a:hover{color:rgba(255,255,255,.7);}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}.reveal.visible{opacity:1!important;transform:translateY(0)!important;}
+@media(max-width:960px){nav{padding:14px 24px;}.nav-links{display:none;}.page-hero{padding:0 24px;height:260px;}.page-section{padding:60px 24px;}.adv-grid{grid-template-columns:1fr;}.promise-grid{grid-template-columns:1fr;}.cta-bar{flex-direction:column;padding:40px 24px;}.footer-main{grid-template-columns:1fr 1fr;gap:28px;padding:48px 24px 36px;}.footer-bottom{flex-direction:column;gap:10px;text-align:center;padding:16px 24px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="index.html"><div class="nav-logo-main">SMART<span>MOVE</span></div><div class="nav-logo-sub">Trade Solutions · Boston, MA</div></a>
+  <div class="nav-links"><a href="index.html">首页</a><a href="aboutus.html">关于我们</a><a href="contact.html">联系我们</a><a href="index.html#contact" class="nav-cta">合作咨询</a></div>
+</nav>
+<div class="page-hero">
+  <div class="hero-content">
+    <div class="hero-tag">Why Choose SMTS</div>
+    <h1 class="hero-title">卖家真正<br>关心的<span>我们都做到了</span></h1>
+    <p class="hero-sub">不只是仓库，而是你的美国供应链合伙人。</p>
+  </div>
+</div>
+<!-- 6 Advantages -->
+<section class="page-section">
+  <div class="section-tag reveal">核心优势</div>
+  <h2 class="section-h2 reveal">6大核心优势</h2>
+  <p class="section-lead reveal">从地理位置到系统对接，SMTS 的每一项优势都直接解决跨境卖家的痛点。</p>
+  <div class="adv-grid reveal">
+    <div class="adv-card"><div class="adv-num">ADV / 01</div><span class="adv-icon">🗺️</span><div class="adv-title">东海岸物流优势</div><div class="adv-desc">美国人口和消费主要集中在东海岸。波士顿仓库地理位置优越，辐射全美东北部核心消费区，覆盖密度远超中西部仓库。</div><span class="adv-highlight">East Coast Fulfillment Center</span></div>
+    <div class="adv-card"><div class="adv-num">ADV / 02</div><span class="adv-icon">📦</span><div class="adv-title">专注轻小件</div><div class="adv-desc">只专注小包裹高效履约。多承运商网络成本灵活，特别适合 Temu / Shein 爆款、TikTok Shop 和独立站的高频小件发货需求。</div><span class="adv-highlight">多承运商网络灵活调度</span></div>
+    <div class="adv-card"><div class="adv-num">ADV / 03</div><span class="adv-icon">⚡</span><div class="adv-title">高订单处理能力</div><div class="adv-desc">日处理 20,000+ 单，无论是日常运营还是爆款冲单，SMTS 都能保障发货节奏，不让你的店铺因物流掉分。</div><span class="adv-highlight">20,000+ 单 / 天</span></div>
+    <div class="adv-card"><div class="adv-num">ADV / 04</div><span class="adv-icon">🇺🇸</span><div class="adv-title">真正的美国本土团队</div><div class="adv-desc">25人本地专业团队，真实的美国本土运营，熟悉各平台合规要求，沟通无障碍，问题处理更快。</div><span class="adv-highlight">25人本地团队</span></div>
+    <div class="adv-card"><div class="adv-num">ADV / 05</div><span class="adv-icon">🔗</span><div class="adv-title">多平台 & WMS 对接</div><div class="adv-desc">支持 TikTok Shop、Temu、Shein、Etsy、Shopify 订单系统同步；同时对接领星、极风 WMS，数据无缝衔接。</div><span class="adv-highlight">领星 · 极风 WMS</span></div>
+    <div class="adv-card"><div class="adv-num">ADV / 06</div><span class="adv-icon">🎯</span><div class="adv-title">透明收费无隐藏费用</div><div class="adv-desc">明码标价，入库费、仓储费、操作费全部明细列出，账单清晰，核对方便，拒绝任何模糊收费。</div><span class="adv-highlight">透明账单</span></div>
+  </div>
+</section>
+<!-- Comparison -->
+<section class="page-section alt">
+  <div class="section-tag reveal">对比</div>
+  <h2 class="section-h2 reveal">SMTS vs 其他选择</h2>
+  <p class="section-lead reveal">为什么越来越多卖家从其他仓库转到 SMTS？</p>
+  <div class="reveal" style="overflow-x:auto">
+    <table class="compare-table">
+      <tr><th>对比维度</th><th>SMTS</th><th>国内直发</th><th>其他海外仓</th></tr>
+      <tr><td>配送速度</td><td><span class="check">✓</span> 美国本土发货，更快</td><td><span class="cross">✗</span> 国际运输耗时长</td><td>取决于仓库位置</td></tr>
+      <tr><td>退货处理</td><td><span class="check">✓</span> 美国本土直接接收</td><td><span class="cross">✗</span> 退货成本极高</td><td>部分支持</td></tr>
+      <tr><td>平台合规</td><td><span class="check">✓</span> 熟悉各平台规则</td><td>需自行了解</td><td>参差不齐</td></tr>
+      <tr><td>WMS 对接</td><td><span class="check">✓</span> 领星 · 极风</td><td><span class="cross">✗</span> 无</td><td>部分支持</td></tr>
+      <tr><td>中文沟通</td><td><span class="check">✓</span> 全程中文支持</td><td><span class="check">✓</span></td><td>部分支持</td></tr>
+      <tr><td>Temu 官方合作</td><td><span class="check">✓</span> 官方认证</td><td><span class="cross">✗</span></td><td>极少数</td></tr>
+    </table>
+  </div>
+</section>
+<!-- Promises -->
+<section class="page-section dark">
+  <div class="section-tag reveal" style="color:rgba(26,92,255,.8)">我们的承诺</div>
+  <h2 class="section-h2 reveal" style="color:#fff">合作保障</h2>
+  <p class="section-lead reveal" style="color:rgba(255,255,255,.5);max-width:500px">每一项服务承诺都落实到数字，不是口号。</p>
+  <div class="promise-grid reveal">
+    <div class="promise-card"><div class="promise-icon">📥</div><div class="promise-text"><h3>入库及时率 ≥ 99.9%</h3><p>货物到仓后 48 小时内完成清点验收、条码上架，库存数据实时同步，无积压无延误。</p></div></div>
+    <div class="promise-card"><div class="promise-icon">📤</div><div class="promise-text"><h3>出库准确率 ≥ 99.9%</h3><p>全条码管控，每个包裹双重复核，发错赔偿，发货准确率业内领先。</p></div></div>
+    <div class="promise-card"><div class="promise-icon">💰</div><div class="promise-text"><h3>明码标价无隐藏费用</h3><p>所有费用项目提前告知，账单每月清晰明细，无任何附加费用，核对方便。</p></div></div>
+    <div class="promise-card"><div class="promise-icon">🔒</div><div class="promise-text"><h3>货物安全全程保障</h3><p>专业安全管理体系，货物全程监控录像，货物损坏按约赔偿，让你的库存安全放心。</p></div></div>
+  </div>
+</section>
+<div class="cta-bar">
+  <div><h3>准备好合作了吗？</h3><p>了解完我们的优势，现在告诉我们你的需求，开始你的美国仓储之旅。</p></div>
+  <a href="contact.html" class="btn-white">立即咨询 →</a>
+</div>
+<footer>
+  <div class="footer-main">
+    <div><div class="footer-name">SMART<span>MOVE</span> TRADE SOLUTIONS</div><div class="footer-tagline">Boston, MA · East Coast Fulfillment Center</div><p class="footer-desc">为中国跨境卖家提供美国本土仓储履约服务。Temu 波士顿官方合作仓之一。</p></div>
+    <div><div class="footer-col-title">核心服务</div><div class="footer-links"><a href="services.html">仓储 & 履约</a><a href="focus.html">专注领域</a><a href="why.html">为什么选我们</a><a href="platforms.html">支持平台</a></div></div>
+    <div><div class="footer-col-title">了解更多</div><div class="footer-links"><a href="aboutus.html">关于我们</a><a href="contact.html">联系我们</a></div></div>
+    <div><div class="footer-col-title">联系方式</div>
+      <div class="footer-contact-item"><span class="fci-icon">📞</span><div class="fci-text"><a href="tel:+16173061118">+1 (617) 306-1118</a></div></div>
+      <div class="footer-contact-item"><span class="fci-icon">📧</span><div class="fci-text"><a href="mailto:smartmovetradesolutions@gmail.com">smartmovetradesolutions@gmail.com</a></div></div>
+      <div class="footer-contact-item"><span class="fci-icon">📍</span><div class="fci-text">61 Pleasant St,<br>Randolph, MA 02368</div></div>
+    </div>
+  </div>
+  <div class="footer-bottom"><div class="footer-copy">© 2025 Smart Move Trade Solutions Inc · All Rights Reserved</div><div class="footer-bottom-links"><a href="index.html">首页</a><a href="aboutus.html">关于我们</a><a href="contact.html">联系我们</a></div></div>
+</footer>
+<script>(function(){function c(){document.querySelectorAll('.reveal').forEach(function(el){if(el.getBoundingClientRect().top<window.innerHeight+80)el.classList.add('visible');});}c();window.addEventListener('scroll',c,{passive:true});window.addEventListener('load',c);setTimeout(c,300);})();</script>
+</body></html>
