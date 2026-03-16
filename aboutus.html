@@ -311,45 +311,24 @@ footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255
 .reveal { opacity:0; transform:translateY(24px); transition:opacity 0.65s ease, transform 0.65s ease; }
 .reveal.visible { opacity:1 !important; transform:translateY(0) !important; }
 
+/* ── DROPDOWN (global) ── */
+.nav-dropdown{position:relative;}
+.nav-dropdown>a{display:flex;align-items:center;gap:5px;cursor:default;}
+.nav-dropdown>a::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;}
+.nav-dropdown:hover>a::after{transform:rotate(-135deg);margin-top:2px;}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:-30px;right:-30px;height:28px;}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px;min-width:240px;box-shadow:0 16px 48px rgba(12,18,32,.12);z-index:200;}
+.dropdown-menu::before{content:'';position:absolute;top:-8px;left:50%;width:16px;height:16px;background:#fff;border-left:1px solid var(--border);border-top:1px solid var(--border);transform:translateX(-50%) rotate(45deg);}
+.nav-dropdown:hover .dropdown-menu{display:block;animation:ddFade .18s ease;}
+@keyframes ddFade{from{opacity:0;transform:translateX(-50%) translateY(-6px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
+.dd-item{display:block;padding:14px 20px;border-radius:8px;text-decoration:none;color:var(--ink);transition:background .15s;}
+.dd-item:hover{background:rgba(26,92,255,.08);}
+.dd-name{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.3;}
+
 /* ── RESPONSIVE ── */
 @media (max-width:960px) {
-
-  /* ── NAV + DROPDOWN ── */
-  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;background:rgba(255,255,255,0.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
-  .nav-logo{display:flex;flex-direction:column;gap:1px;text-decoration:none;}
-  .nav-logo-main{font-family:var(--mono);font-size:1.2rem;font-weight:500;letter-spacing:0.12em;color:var(--ink);}
-  .nav-logo-main span{color:var(--accent);}
-  .nav-logo-sub{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;}
-  .nav-links{display:flex;gap:28px;align-items:center;}
-  .nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
-  .nav-links a:hover{color:var(--ink);}
-  .nav-cta{background:var(--accent)!important;color:#fff!important;padding:10px 24px;border-radius:4px;font-size:0.8rem!important;font-weight:700!important;transition:background .2s!important;}
-  .nav-cta:hover{background:#0044dd!important;}
-  /* Dropdown */
-  .nav-dropdown{position:relative;}
-  .nav-dropdown > a{display:flex;align-items:center;gap:5px;}
-  .nav-dropdown > a::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;}
-  .nav-dropdown:hover > a::after{transform:rotate(-135deg);margin-top:2px;}
-  .dropdown-menu{
-    display:none;position:absolute;top:calc(100% + 12px);left:50%;transform:translateX(-50%);
-    background:#fff;border:1px solid var(--border);border-radius:12px;
-    padding:8px;min-width:240px;
-    box-shadow:0 16px 48px rgba(12,18,32,.12);
-    z-index:200;
-  }
-  .dropdown-menu::before{content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:12px;height:12px;background:#fff;border-left:1px solid var(--border);border-top:1px solid var(--border);transform:translateX(-50%) rotate(45deg);}
-  .nav-dropdown:hover .dropdown-menu{display:block;animation:ddFade .18s ease;}
-  @keyframes ddFade{from{opacity:0;transform:translateX(-50%) translateY(-6px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
-  .dd-item{display:flex;align-items:flex-start;gap:12px;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--ink);transition:background .15s;}
-  .dd-item:hover{background:rgba(26,92,255,.06);}
-  .dd-icon{width:34px;height:34px;background:rgba(26,92,255,.08);border-radius:7px;display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.95rem;}
-  .dd-item:hover .dd-icon{background:rgba(26,92,255,.15);}
-  .dd-text{}
-  .dd-name{font-size:.82rem;font-weight:600;color:var(--ink);line-height:1.3;}
-  .dd-sub{font-size:.72rem;color:var(--muted);margin-top:2px;line-height:1.4;}
-  @media(max-width:960px){nav{padding:14px 24px;}.nav-links{display:none;}}
-
-
+  nav{padding:14px 24px;}
+  .nav-links{display:none;}
   .contact-header { grid-template-columns:1fr; gap:40px; }
   .contact-cta-banner { flex-direction:column; padding:36px 28px; }
   .timeline::before { left:20px; }
@@ -397,23 +376,23 @@ footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255
   <div class="nav-links">
     <a href="index.html">首页</a>
     <div class="nav-dropdown">
-      <a href="services.html">服务</a>
+      <a href="javascript:void(0)">探索</a>
       <div class="dropdown-menu">
         <a class="dd-item" href="services.html">
-          <div class="dd-icon">🚀</div>
-          <div class="dd-text"><div class="dd-name">核心服务</div><div class="dd-sub">仓储、Pick & Pack、一件代发、退货处理</div></div>
+          
+          <span class="dd-name">核心服务</span>
         </a>
         <a class="dd-item" href="focus.html">
-          <div class="dd-icon">🎯</div>
-          <div class="dd-text"><div class="dd-name">专注领域</div><div class="dd-sub">轻小件甜蜜区 · 5大承运商 · 爆款方案</div></div>
+          
+          <span class="dd-name">专注领域</span>
         </a>
         <a class="dd-item" href="why.html">
-          <div class="dd-icon">⭐</div>
-          <div class="dd-text"><div class="dd-name">为什么选择 SMTS</div><div class="dd-sub">6大核心优势 · 透明收费 · Temu官方认证</div></div>
+          
+          <span class="dd-name">商业信任</span>
         </a>
         <a class="dd-item" href="platforms.html">
-          <div class="dd-icon">🔗</div>
-          <div class="dd-text"><div class="dd-name">支持平台 & 合作流程</div><div class="dd-sub">Temu · Shein · TikTok · Etsy · Shopify</div></div>
+          
+          <span class="dd-name">平台合作</span>
         </a>
       </div>
     </div>

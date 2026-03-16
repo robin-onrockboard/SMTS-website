@@ -21,6 +21,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-links a:hover,.nav-links a.active{color:var(--ink);}
 .nav-cta{background:var(--accent)!important;color:#fff!important;padding:10px 24px;border-radius:4px;font-size:0.8rem!important;font-weight:700!important;}
 .nav-cta:hover{background:#0044dd!important;}
+.nav-dropdown{position:relative;}.nav-dropdown>a{display:flex;align-items:center;gap:5px;cursor:default;}.nav-dropdown>a::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;}.nav-dropdown:hover>a::after{transform:rotate(-135deg);margin-top:2px;}.nav-dropdown::after{content:'';position:absolute;top:100%;left:-30px;right:-30px;height:28px;}.dropdown-menu{display:none;position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px;min-width:240px;box-shadow:0 16px 48px rgba(12,18,32,.12);z-index:200;}.dropdown-menu::before{content:'';position:absolute;top:-8px;left:50%;width:16px;height:16px;background:#fff;border-left:1px solid var(--border);border-top:1px solid var(--border);transform:translateX(-50%) rotate(45deg);}.nav-dropdown:hover .dropdown-menu{display:block;animation:ddFade .18s ease;}@keyframes ddFade{from{opacity:0;transform:translateX(-50%) translateY(-6px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}.dd-item{display:block;padding:14px 20px;border-radius:8px;text-decoration:none;color:var(--ink);transition:background .15s;}.dd-item:hover{background:rgba(26,92,255,.08);}.dd-name{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.3;}
 .about-subnav{position:sticky;top:64px;z-index:90;background:#fff;border-bottom:1px solid var(--border);padding:0 72px;display:flex;align-items:center;}
 .about-subnav a{display:inline-block;padding:16px 24px;font-size:0.875rem;font-weight:500;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;}
 .about-subnav a:hover{color:var(--ink);}
@@ -116,7 +117,12 @@ footer{background:var(--ink);padding:0;border-top:1px solid rgba(255,255,255,.06
   </a>
   <div class="nav-links">
     <a href="index.html">首页</a>
-    <a href="index.html#services">服务</a>
+    <div class="nav-dropdown"><a href="javascript:void(0)">探索</a><div class="dropdown-menu">
+      <a class="dd-item" href="services.html"><span class="dd-name">核心服务</span></a>
+      <a class="dd-item" href="focus.html"><span class="dd-name">专注领域</span></a>
+      <a class="dd-item" href="why.html"><span class="dd-name">商业信任</span></a>
+      <a class="dd-item" href="platforms.html"><span class="dd-name">平台合作</span></a>
+    </div></div>
     <a href="aboutus.html">关于我们</a>
     <a href="contact.html" class="active">联系我们</a>
     <a href="index.html#contact" class="nav-cta">合作咨询</a>
@@ -221,7 +227,6 @@ footer{background:var(--ink);padding:0;border-top:1px solid rgba(255,255,255,.06
       <div class="footer-name">SMART<span>MOVE</span> TRADE SOLUTIONS</div>
       <div class="footer-tagline">Boston, MA · East Coast Fulfillment Center</div>
       <p class="footer-desc">为中国跨境卖家提供美国本土仓储履约服务。Temu 波士顿官方合作仓之一。</p>
-      <a href="mailto:smartmovetradesolutions@gmail.com" class="footer-email-link">📧 smartmovetradesolutions@gmail.com</a>
     </div>
     <div>
       <div class="footer-col-title">核心服务</div>
