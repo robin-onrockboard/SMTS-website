@@ -140,6 +140,142 @@ footer{background:var(--ink);padding:0;border-top:1px solid rgba(255,255,255,.06
 .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}
 .reveal.visible{opacity:1!important;transform:translateY(0)!important;}
 @media(max-width:960px){nav{padding:14px 24px;}.nav-links{display:none;}.about-subnav{padding:0 24px;top:60px;}.about-hero{padding:0 24px;margin-top:108px;height:240px;}.contact-main,.form-section{padding:56px 24px;}.hq-grid{grid-template-columns:1fr;gap:40px;}.map-card{height:360px;}.map-info{left:12px;right:12px;bottom:12px;flex-direction:column;align-items:flex-start;}.map-site{left:168px;top:168px;width:176px;height:90px;}.map-site-info{left:220px;top:188px;gap:10px;}.map-site-title{font-size:.9rem;max-width:126px;}.map-label-main{left:116px;top:94px;font-size:.82rem;}.map-label-main-2{left:252px;top:86px;font-size:.8rem;}.map-road-vertical{right:54px;height:278px;}.map-road-lower{left:132px;bottom:58px;width:240px;}.map-road-loop{left:104px;width:230px;}.form-section-inner{grid-template-columns:1fr;gap:40px;}.cf-grid{grid-template-columns:1fr;}.footer-main{grid-template-columns:1fr 1fr;gap:32px;padding:48px 24px 36px;}.footer-bottom{flex-direction:column;gap:10px;text-align:center;padding:16px 24px;}}
+  @media (max-width:960px) {
+    nav {
+      position: sticky;
+      top: 0;
+      padding: 14px 20px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 14px;
+    }
+    .nav-logo-main { font-size: 1.05rem; }
+    .nav-logo-sub { font-size: 0.54rem; line-height: 1.5; }
+    .nav-links {
+      display: flex;
+      width: 100%;
+      flex-wrap: wrap;
+      gap: 10px 12px;
+      align-items: flex-start;
+    }
+    .nav-links > a,
+    .nav-dropdown > a {
+      padding: 9px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.94);
+      color: var(--ink);
+      font-size: 0.78rem;
+      line-height: 1.2;
+    }
+    .nav-dropdown {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+    .nav-dropdown > a { cursor: pointer; width: fit-content; }
+    .nav-dropdown::after,
+    .dropdown-menu::before { display: none; }
+    .nav-dropdown:hover > a::after {
+      transform: rotate(45deg);
+      margin-top: -3px;
+    }
+    .dropdown-menu {
+      display: flex;
+      position: static;
+      left: auto;
+      top: auto;
+      transform: none;
+      min-width: 0;
+      max-width: 100%;
+      padding: 0;
+      gap: 8px;
+      flex-wrap: wrap;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    .dd-item {
+      padding: 10px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.94);
+    }
+    .dd-name { font-size: 0.78rem; white-space: nowrap; }
+    .about-subnav {
+      position: static;
+      padding: 0 20px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .about-subnav a {
+      padding: 14px 16px;
+      flex: 0 0 auto;
+    }
+    .about-hero {
+      margin-top: 0;
+      height: auto;
+      min-height: 220px;
+      padding: 32px 20px;
+    }
+    .contact-main,
+    .form-section { padding: 56px 20px; }
+    .map-card { height: 320px; }
+    .map-info {
+      left: 12px;
+      right: 12px;
+      bottom: 12px;
+      padding: 14px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .map-addr-title { font-size: 1.02rem; }
+    .map-link {
+      width: 100%;
+      justify-content: center;
+    }
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 40px 20px 28px;
+    }
+    .footer-bottom {
+      padding: 16px 20px 24px;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+    .footer-bottom-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-desc,
+    .footer-links a,
+    .fci-text {
+      word-break: break-word;
+    }
+  }
+  @media (max-width:560px) {
+    .map-card { height: 280px; }
+    .map-label-main-2,
+    .map-label-side { display: none; }
+    .map-road-main { top: 64px; height: 46px; }
+    .map-road-vertical { top: 30px; right: 34px; width: 34px; height: 230px; }
+    .map-road-loop { left: 72px; top: 146px; width: 175px; height: 32px; }
+    .map-road-lower { left: 106px; bottom: 50px; width: 204px; height: 32px; }
+    .map-road-service { left: 132px; top: 136px; width: 44px; height: 130px; }
+    .map-site { left: 112px; top: 136px; width: 146px; height: 76px; }
+    .map-site::before { left: -18px; top: -12px; width: 84px; height: 132px; }
+    .map-site-info { left: 156px; top: 154px; gap: 8px; }
+    .map-pin { width: 18px; height: 18px; }
+    .map-site-title { font-size: 0.78rem; max-width: 108px; }
+    .map-site-note { font-size: 0.54rem; }
+    .map-label-main { left: 86px; top: 72px; font-size: 0.72rem; }
+    .map-info { padding: 12px; gap: 10px; }
+    .map-addr-label { font-size: 0.58rem; }
+    .map-link { font-size: 0.72rem; padding: 9px 14px; }
+  }
 </style>
 </head>
 <body>
