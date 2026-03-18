@@ -146,7 +146,7 @@ nav {
 /* ── CULTURE SECTION (flip cards) ── */
 .culture-section { padding:80px 72px; background:var(--paper); }
 .culture-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px; }
-.flip-card { height:340px; perspective:1000px; cursor:pointer; }
+.flip-card { height:390px; perspective:1000px; cursor:pointer; }
 .flip-card-inner {
   position:relative; width:100%; height:100%;
   transition:transform 0.7s cubic-bezier(.16,1,.3,1);
@@ -173,12 +173,12 @@ nav {
 .flip-back {
   background:#fff; border:1px solid var(--border);
   transform:rotateY(180deg);
-  display:flex; flex-direction:column; padding:36px 32px;
+  display:flex; flex-direction:column; padding:32px 28px 28px;
 }
 .flip-back-tag { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.14em; color:var(--accent); text-transform:uppercase; margin-bottom:14px; }
-.flip-back-title { font-family:var(--serif); font-size:1.3rem; font-weight:900; color:var(--ink); margin-bottom:16px; letter-spacing:-0.01em; }
-.flip-back-body { font-size:0.83rem; color:var(--muted); line-height:1.8; flex:1; }
-.flip-back-footer { margin-top:16px; display:flex; align-items:center; gap:8px; }
+.flip-back-title { font-family:var(--serif); font-size:1.2rem; font-weight:900; color:var(--ink); margin-bottom:14px; letter-spacing:-0.01em; line-height:1.3; }
+.flip-back-body { font-size:0.8rem; color:var(--muted); line-height:1.72; flex:1; }
+.flip-back-footer { margin-top:12px; display:flex; align-items:center; gap:8px; }
 .flip-dot { width:8px; height:8px; background:var(--accent); border-radius:50%; flex-shrink:0; }
 
 /* Color variants */
@@ -335,6 +335,7 @@ footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255
   .intro-grid{grid-template-columns:1fr;gap:40px;}
   .culture-section{padding:60px 24px;}
   .culture-grid{grid-template-columns:1fr;gap:20px;}
+  .flip-card{height:420px;}
   .milestones-section{padding:60px 24px;}
   .contact-header { grid-template-columns:1fr; gap:40px; }
   .contact-cta-banner { flex-direction:column; padding:36px 28px; }
