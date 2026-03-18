@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>联系我们 — SMTS Smart Move Trade Solutions</title>
+<meta name="description" content="联系 SMTS 波士顿团队。电话：+1 (617) 306-1118。支持中文沟通。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--ink:#0c1220;--paper:#f4f6fa;--accent:#1a5cff;--muted:#5a6478;--border:rgba(12,18,32,0.1);--serif:"Noto Serif SC",serif;--sans:"Noto Sans SC",sans-serif;--mono:"DM Mono",monospace;}
+*{margin:0;padding:0;box-sizing:border-box;}html{scroll-behavior:smooth;}
+body{background:#fff;color:var(--ink);font-family:var(--sans);overflow-x:hidden;}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 56px;background:rgba(255,255,255,0.92);backdrop-filter:blur(16px);border-bottom:1px solid var(--border);}
+.nav-logo{display:flex;flex-direction:column;gap:1px;text-decoration:none;}
+.nav-logo-main{font-family:var(--mono);font-size:1.2rem;font-weight:500;letter-spacing:0.12em;color:var(--ink);}
+.nav-logo-main span{color:var(--accent);}
+.nav-logo-sub{font-family:var(--mono);font-size:0.6rem;letter-spacing:0.1em;color:var(--muted);text-transform:uppercase;}
+.nav-links{display:flex;gap:28px;align-items:center;}
+.nav-links a{font-size:0.85rem;font-weight:500;color:var(--muted);text-decoration:none;transition:color .2s;}
+.nav-links a:hover,.nav-links a.active{color:var(--ink);}
+.nav-cta{background:var(--accent)!important;color:#fff!important;padding:10px 24px;border-radius:4px;font-size:0.8rem!important;font-weight:700!important;}
+.nav-cta:hover{background:#0044dd!important;}
+.nav-dropdown{position:relative;}.nav-dropdown>a{display:flex;align-items:center;gap:5px;cursor:default;}.nav-dropdown>a::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;}.nav-dropdown:hover>a::after{transform:rotate(-135deg);margin-top:2px;}.nav-dropdown::after{content:'';position:absolute;top:100%;left:-30px;right:-30px;height:28px;}.dropdown-menu{display:none;position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px;min-width:240px;box-shadow:0 16px 48px rgba(12,18,32,.12);z-index:200;}.dropdown-menu::before{content:'';position:absolute;top:-8px;left:50%;width:16px;height:16px;background:#fff;border-left:1px solid var(--border);border-top:1px solid var(--border);transform:translateX(-50%) rotate(45deg);}.nav-dropdown:hover .dropdown-menu{display:block;animation:ddFade .18s ease;}@keyframes ddFade{from{opacity:0;transform:translateX(-50%) translateY(-6px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}.dd-item{display:block;padding:14px 20px;border-radius:8px;text-decoration:none;color:var(--ink);transition:background .15s;}.dd-item:hover{background:rgba(26,92,255,.08);}.dd-name{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.3;}.lang-dropdown .dropdown-menu{min-width:160px;}
+.about-subnav{position:sticky;top:64px;z-index:90;background:#fff;border-bottom:1px solid var(--border);padding:0 72px;display:flex;align-items:center;}
+.about-subnav a{display:inline-block;padding:16px 24px;font-size:0.875rem;font-weight:500;color:var(--muted);text-decoration:none;border-bottom:2px solid transparent;transition:color .2s,border-color .2s;}
+.about-subnav a:hover{color:var(--ink);}
+.about-subnav a.active{color:var(--accent);border-bottom-color:var(--accent);}
+.about-hero{margin-top:112px;height:300px;background:linear-gradient(135deg,var(--ink) 0%,#0d2044 60%,#1a3a6e 100%);display:flex;align-items:center;padding:0 72px;position:relative;overflow:hidden;}
+.about-hero::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 48px),repeating-linear-gradient(90deg,rgba(255,255,255,.025) 0,rgba(255,255,255,.025) 1px,transparent 1px,transparent 48px);}
+.about-hero::after{content:"";position:absolute;right:-80px;top:-80px;width:500px;height:500px;background:radial-gradient(circle,rgba(26,92,255,.2) 0%,transparent 65%);}
+.about-hero-content{position:relative;z-index:1;}
+.about-hero-tag{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;color:rgba(26,92,255,.9);text-transform:uppercase;margin-bottom:14px;}
+.about-hero-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;letter-spacing:-.025em;line-height:1.1;margin-bottom:14px;}
+.about-hero-sub{font-size:.95rem;color:rgba(255,255,255,.6);line-height:1.75;}
+.section-tag{font-family:var(--mono);font-size:.68rem;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
+.section-tag::before{content:"";display:block;width:18px;height:1px;background:var(--accent);}
+.contact-main{padding:80px 72px;background:var(--paper);}
+.hq-title{font-family:var(--serif);font-size:2.2rem;font-weight:900;color:var(--accent);letter-spacing:-.02em;margin-bottom:6px;}
+.hq-underline{width:48px;height:3px;background:var(--accent);border-radius:2px;margin-bottom:44px;}
+.hq-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:start;}
+.contact-info-list{display:flex;flex-direction:column;}
+.ci-row{display:flex;gap:18px;align-items:flex-start;padding:22px 0;border-bottom:1px solid var(--border);}
+.ci-row:last-of-type{border-bottom:none;}
+.ci-icon-circle{width:44px;height:44px;flex-shrink:0;background:var(--accent);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.1rem;color:#fff;}
+.ci-body{display:flex;flex-direction:column;gap:3px;}
+.ci-body label{font-family:var(--mono);font-size:.65rem;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);}
+.ci-val{font-size:.95rem;font-weight:500;color:var(--ink);}
+.ci-val a{color:var(--accent);text-decoration:none;}
+.ci-val a:hover{text-decoration:underline;}
+.ci-note{font-size:.78rem;color:var(--muted);margin-top:2px;}
+.consult-btn{display:inline-flex;align-items:center;gap:8px;background:var(--accent);color:#fff;padding:14px 32px;border-radius:8px;font-family:var(--serif);font-size:1rem;font-weight:700;text-decoration:none;margin-top:32px;transition:background .2s,transform .2s;}
+.consult-btn:hover{background:#0044dd;transform:translateY(-2px);}
+.consult-btn::after{content:" →";}
+.map-card{background:linear-gradient(135deg,var(--ink) 0%,#132040 100%);border-radius:16px;height:420px;display:flex;flex-direction:column;justify-content:flex-end;padding:28px;position:relative;overflow:hidden;}
+.map-card::before{content:"";position:absolute;inset:0;background:repeating-linear-gradient(0deg,rgba(26,92,255,.04) 0,rgba(26,92,255,.04) 1px,transparent 1px,transparent 40px),repeating-linear-gradient(90deg,rgba(26,92,255,.04) 0,rgba(26,92,255,.04) 1px,transparent 1px,transparent 40px);}
+.map-pin-zone{position:absolute;top:42%;left:50%;transform:translate(-50%,-50%);z-index:1;display:flex;flex-direction:column;align-items:center;}
+.map-pin-emoji{font-size:2.8rem;filter:drop-shadow(0 4px 12px rgba(26,92,255,.5));}
+.map-ripple{width:64px;height:64px;border-radius:50%;background:rgba(26,92,255,.15);border:1px solid rgba(26,92,255,.3);margin-top:-10px;animation:ripple 2.2s ease-in-out infinite;}
+@keyframes ripple{0%,100%{transform:scale(1);opacity:.8}50%{transform:scale(1.2);opacity:.35}}
+.map-info{position:relative;z-index:1;}
+.map-addr-label{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;color:rgba(255,255,255,.45);text-transform:uppercase;margin-bottom:5px;}
+.map-addr-title{font-family:var(--serif);font-size:1.3rem;font-weight:700;color:#fff;margin-bottom:14px;}
+.map-link{display:inline-flex;align-items:center;gap:6px;background:var(--accent);color:#fff;padding:10px 22px;border-radius:6px;font-size:.82rem;font-weight:700;text-decoration:none;transition:background .2s;}
+.map-link:hover{background:#0044dd;}
+.form-section{padding:80px 72px;background:#fff;border-top:1px solid var(--border);}
+.form-section-inner{display:grid;grid-template-columns:1fr 1.3fr;gap:80px;align-items:start;}
+.form-left h2{font-family:var(--serif);font-size:2rem;font-weight:900;letter-spacing:-.02em;margin-bottom:12px;}
+.form-left p{font-size:.9rem;color:var(--muted);line-height:1.8;}
+.quick-list{display:flex;flex-direction:column;gap:14px;margin-top:28px;}
+.quick-item{display:flex;align-items:center;gap:12px;}
+.quick-icon{width:36px;height:36px;background:rgba(26,92,255,.08);border:1px solid rgba(26,92,255,.15);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:.9rem;flex-shrink:0;}
+.quick-text{font-size:.85rem;color:var(--ink);}
+.quick-text a{color:var(--accent);text-decoration:none;font-weight:500;}
+.quick-text a:hover{text-decoration:underline;}
+.cf-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;}
+.cf-full{grid-column:1/-1;}
+.cf-group{display:flex;flex-direction:column;gap:7px;}
+.cf-group label{font-family:var(--mono);font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;color:var(--muted);}
+.cf-group input,.cf-group select,.cf-group textarea{border:1px solid var(--border);background:var(--paper);padding:13px 16px;font-family:var(--sans);font-size:.875rem;color:var(--ink);border-radius:6px;outline:none;transition:border-color .2s,box-shadow .2s;-webkit-appearance:none;}
+.cf-group input:focus,.cf-group select:focus,.cf-group textarea:focus{border-color:var(--accent);box-shadow:0 0 0 3px rgba(26,92,255,.1);}
+.cf-group textarea{resize:vertical;min-height:120px;}
+.cf-submit{background:var(--ink);color:#fff;padding:14px 40px;font-size:.875rem;font-weight:700;border:none;border-radius:6px;cursor:pointer;width:100%;transition:background .2s,transform .2s;}
+.cf-submit:hover{background:var(--accent);transform:translateY(-1px);}
+footer{background:var(--ink);padding:0;border-top:1px solid rgba(255,255,255,.06);}
+.footer-main{padding:64px 72px 48px;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:56px;border-bottom:1px solid rgba(255,255,255,.08);}
+.footer-name{font-family:var(--mono);font-size:1.05rem;font-weight:500;color:#fff;letter-spacing:.1em;margin-bottom:8px;}
+.footer-name span{color:var(--accent);}
+.footer-tagline{font-family:var(--mono);font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.08em;margin-bottom:16px;}
+.footer-desc{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.75;margin-bottom:20px;}
+.footer-email-link{display:inline-flex;align-items:center;gap:6px;font-family:var(--mono);font-size:.72rem;color:var(--accent);text-decoration:none;border-bottom:1px solid rgba(26,92,255,.3);padding-bottom:2px;}
+.footer-email-link:hover{border-color:var(--accent);}
+.footer-col-title{font-family:var(--mono);font-size:.68rem;color:rgba(255,255,255,.45);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+.footer-links{display:flex;flex-direction:column;gap:10px;}
+.footer-links a{font-size:.83rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
+.footer-links a:hover{color:#fff;}
+.footer-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;}
+.fci-icon{font-size:.85rem;margin-top:2px;flex-shrink:0;}
+.fci-text{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.55;}
+.fci-text a{color:var(--accent);text-decoration:none;}
+.fci-text a:hover{text-decoration:underline;}
+.footer-bottom{padding:20px 72px;display:flex;justify-content:space-between;align-items:center;}
+.footer-copy{font-family:var(--mono);font-size:.63rem;color:rgba(255,255,255,.2);letter-spacing:.06em;}
+.footer-bottom-links{display:flex;gap:20px;}
+.footer-bottom-links a{font-family:var(--mono);font-size:.63rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s;}
+.footer-bottom-links a:hover{color:rgba(255,255,255,.7);}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease;}
+.reveal.visible{opacity:1!important;transform:translateY(0)!important;}
+@media(max-width:960px){nav{padding:14px 24px;}.nav-links{display:none;}.about-subnav{padding:0 24px;top:60px;}.about-hero{padding:0 24px;margin-top:108px;height:240px;}.contact-main,.form-section{padding:56px 24px;}.hq-grid{grid-template-columns:1fr;gap:40px;}.form-section-inner{grid-template-columns:1fr;gap:40px;}.cf-grid{grid-template-columns:1fr;}.footer-main{grid-template-columns:1fr 1fr;gap:32px;padding:48px 24px 36px;}.footer-bottom{flex-direction:column;gap:10px;text-align:center;padding:16px 24px;}}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="indexCN.html">
+    <div class="nav-logo-main">SMART<span>MOVE</span></div>
+    <div class="nav-logo-sub">Trade Solutions · Boston, MA</div>
+  </a>
+  <div class="nav-links">
+    <a href="indexCN.html">首页</a>
+    <div class="nav-dropdown"><a href="javascript:void(0)">探索</a><div class="dropdown-menu">
+      <a class="dd-item" href="servicesCN.html"><span class="dd-name">核心服务</span></a>
+      <a class="dd-item" href="focusCN.html"><span class="dd-name">专注领域</span></a>
+      <a class="dd-item" href="whyCN.html"><span class="dd-name">商业信任</span></a>
+      <a class="dd-item" href="platformsCN.html"><span class="dd-name">平台合作</span></a>
+    </div></div>
+    <a href="aboutusCN.html">关于我们</a>
+    <a href="contactCN.html" class="active">联系我们</a>
+    <a href="indexCN.html#contact" class="nav-cta">合作咨询</a>
+  </div>
+</nav>
+<div class="about-subnav">
+  <a href="aboutusCN.html">SMTS 简介</a>
+  <a href="contactCN.html" class="active">联系我们</a>
+</div>
+<div class="about-hero">
+  <div class="about-hero-content">
+    <div class="about-hero-tag">Contact Us</div>
+    <h1 class="about-hero-title">联系我们</h1>
+    <p class="about-hero-sub">美国东部时间工作，支持中英文双语沟通<br>工作日内快速响应，欢迎实地参观仓库</p>
+  </div>
+</div>
+<section class="contact-main">
+  <h2 class="hq-title reveal">波士顿总部</h2>
+  <div class="hq-underline reveal"></div>
+  <div class="hq-grid">
+    <div class="contact-info-list">
+      <div class="ci-row reveal">
+        <div class="ci-icon-circle">📞</div>
+        <div class="ci-body">
+          <label>电话</label>
+          <div class="ci-val"><a href="tel:+16173061118">+1 (617) 306-1118</a></div>
+          <div class="ci-note">美国东部时间 Mon–Fri 9:00–18:00</div>
+        </div>
+      </div>
+      <div class="ci-row reveal">
+        <div class="ci-icon-circle">📧</div>
+        <div class="ci-body">
+          <label>邮件</label>
+          <div class="ci-val"><a href="mailto:smartmovetradesolutions@gmail.com">smartmovetradesolutions@gmail.com</a></div>
+          <div class="ci-note">支持中文沟通，工作日内回复</div>
+        </div>
+      </div>
+      <div class="ci-row reveal">
+        <div class="ci-icon-circle">📧</div>
+        <div class="ci-body">
+          <label>售后支持及投诉意见</label>
+          <div class="ci-val"><a href="mailto:smartmovetradesolutions@gmail.com">smartmovetradesolutions@gmail.com</a></div>
+        </div>
+      </div>
+      <div class="ci-row reveal">
+        <div class="ci-icon-circle">📍</div>
+        <div class="ci-body">
+          <label>仓库地址</label>
+          <div class="ci-val">61 Pleasant St, Randolph, MA 02368</div>
+          <div class="ci-note">United States · 诚邀实地参观考察</div>
+        </div>
+      </div>
+      <div class="ci-row reveal">
+        <div class="ci-icon-circle">🕐</div>
+        <div class="ci-body">
+          <label>工作时间</label>
+          <div class="ci-val">Mon–Fri 9:00–18:00 EST</div>
+          <div class="ci-note">支持中文 / English 双语沟通</div>
+        </div>
+      </div>
+      <a href="indexCN.html#contact" class="consult-btn reveal">合作咨询</a>
+    </div>
+    <div class="map-card reveal">
+      <div class="map-pin-zone">
+        <div class="map-pin-emoji">📍</div>
+        <div class="map-ripple"></div>
+      </div>
+      <div class="map-info">
+        <div class="map-addr-label">61 Pleasant St, Randolph, MA 02368</div>
+        <div class="map-addr-title">SMTS 波士顿仓库</div>
+        <a href="https://maps.google.com/?q=61+Pleasant+St,+Randolph,+MA+02368" target="_blank" class="map-link">在 Google Maps 查看 →</a>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="form-section">
+  <div class="form-section-inner">
+    <div class="form-left reveal">
+      <div class="section-tag">在线咨询</div>
+      <h2>开始你的第一次咨询</h2>
+      <p>填写右侧表单，我们的团队会在工作日内主动联系你，为你定制专属的美国仓储履约方案。</p>
+      <div class="quick-list">
+        <div class="quick-item"><div class="quick-icon">📞</div><div class="quick-text"><a href="tel:+16173061118">+1 (617) 306-1118</a></div></div>
+        <div class="quick-item"><div class="quick-icon">📧</div><div class="quick-text"><a href="mailto:smartmovetradesolutions@gmail.com">smartmovetradesolutions@gmail.com</a></div></div>
+        <div class="quick-item"><div class="quick-icon">📍</div><div class="quick-text">61 Pleasant St, Randolph, MA 02368</div></div>
+      </div>
+    </div>
+    <form class="cf-grid reveal" action="https://formspree.io/f/mpqyjvjj" method="POST" onsubmit="handleSubmit(event)">
+      <input type="hidden" name="_subject" value="【SMTS】联系我们 - 新询盘">
+      <div class="cf-group"><label>您的姓名</label><input type="text" name="姓名" placeholder="姓名" required></div>
+      <div class="cf-group"><label>微信号 / 邮箱</label><input type="text" name="微信号或邮箱" placeholder="微信号或 Email" required></div>
+      <div class="cf-group"><label>主营平台</label><select name="主营平台"><option>Temu</option><option>Shein</option><option>TikTok Shop</option><option>Etsy</option><option>Shopify 独立站</option><option>多平台</option></select></div>
+      <div class="cf-group"><label>月均订单量</label><select name="月均订单量"><option>1,000 单以下</option><option>1,000 – 5,000 单</option><option>5,000 – 15,000 单</option><option>15,000 单以上</option></select></div>
+      <div class="cf-group cf-full"><label>货品描述（可选）</label><textarea name="货品描述" placeholder="请简单描述您的货品类型、重量、SKU数量，或其他问题…"></textarea></div>
+      <div class="cf-full"><button type="submit" class="cf-submit">提交合作申请</button></div>
+    </form>
+  </div>
+</section>
+<footer>
+  <div class="footer-main">
+    <div>
+      <div class="footer-name">SMART<span>MOVE</span> TRADE SOLUTIONS</div>
+      <div class="footer-tagline">Boston, MA · East Coast Fulfillment Center</div>
+      <p class="footer-desc">为中国跨境卖家提供美国本土仓储履约服务。Temu 波士顿官方合作仓之一。</p>
+    </div>
+    <div>
+      <div class="footer-col-title">核心服务</div>
+      <div class="footer-links">
+        <a href="indexCN.html#service-overview">头程干线服务</a>
+        <a href="indexCN.html#service-overview">海外仓储服务</a>
+        <a href="indexCN.html#service-overview">一件代发服务</a>
+        <a href="indexCN.html#service-overview">定制合同物流</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">了解更多</div>
+      <div class="footer-links">
+        <a href="aboutusCN.html">关于我们</a>
+        <a href="contactCN.html">联系我们</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">联系方式</div>
+      <div class="footer-contact-item"><span class="fci-icon">📞</span><div class="fci-text"><a href="tel:+16173061118">+1 (617) 306-1118</a></div></div>
+      <div class="footer-contact-item"><span class="fci-icon">📧</span><div class="fci-text"><a href="mailto:smartmovetradesolutions@gmail.com">smartmovetradesolutions@gmail.com</a></div></div>
+      <div class="footer-contact-item"><span class="fci-icon">📍</span><div class="fci-text">61 Pleasant St,<br>Randolph, MA 02368</div></div>
+      <div class="footer-contact-item"><span class="fci-icon">🕐</span><div class="fci-text">Mon–Fri 9:00–18:00 EST</div></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Smart Move Trade Solutions Inc · All Rights Reserved</div>
+    <div class="footer-bottom-links"><a href="indexCN.html">首页</a><a href="aboutusCN.html">关于我们</a><a href="contactCN.html">联系我们</a></div>
+  </div>
+</footer>
+<script>
+(function(){function c(){document.querySelectorAll(".reveal").forEach(function(e){if(e.getBoundingClientRect().top<window.innerHeight+80)e.classList.add("visible");});}c();window.addEventListener("scroll",c,{passive:true});window.addEventListener("load",c);setTimeout(c,300);setTimeout(c,700);})();
+function handleSubmit(e){e.preventDefault();var btn=e.target.querySelector(".cf-submit");btn.textContent="提交中...";btn.disabled=true;btn.style.background="#5a6478";fetch("https://formspree.io/f/mpqyjvjj",{method:"POST",body:new FormData(e.target),headers:{"Accept":"application/json"}}).then(function(r){if(r.ok){btn.textContent="✓ 提交成功！我们会尽快与您联系";btn.style.background="#22a65a";e.target.reset();}else{btn.textContent="提交失败，请直接发邮件联系";btn.style.background="#e84c1e";btn.disabled=false;}}).catch(function(){btn.textContent="网络错误，请直接发邮件联系";btn.style.background="#e84c1e";btn.disabled=false;});}
+</script>
+</body>
+</html>

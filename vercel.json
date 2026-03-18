@@ -1,0 +1,20 @@
+{
+  "cleanUrls": true,
+  "rewrites": [
+    { "source": "/", "destination": "/indexCN.html" },
+    { "source": "/aboutus", "destination": "/aboutusCN.html" },
+    { "source": "/contact", "destination": "/contactCN.html" },
+    { "source": "/focus", "destination": "/focusCN.html" },
+    { "source": "/platforms", "destination": "/platformsCN.html" },
+    { "source": "/services", "destination": "/servicesCN.html" },
+    { "source": "/why", "destination": "/whyCN.html" },
+    { "source": "/en", "destination": "/en/indexEN.html" },
+    { "source": "/en/", "destination": "/en/indexEN.html" },
+    { "source": "/en/aboutus", "destination": "/en/aboutusEN.html" },
+    { "source": "/en/contact", "destination": "/en/contactEN.html" },
+    { "source": "/en/focus", "destination": "/en/focusEN.html" },
+    { "source": "/en/platforms", "destination": "/en/platformsEN.html" },
+    { "source": "/en/services", "destination": "/en/servicesEN.html" },
+    { "source": "/en/why", "destination": "/en/whyEN.html" }
+  ]
+}

@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>关于我们 — SMTS Smart Move Trade Solutions | 美国波士顿海外仓</title>
+<meta name="description" content="SMTS成立于2024年6月，是Temu波士顿官方合作仓之一。累计发货230万+，服务80+平台卖家，仓库SKU 70,000+。">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #0c1220;
+  --paper: #f4f6fa;
+  --accent: #1a5cff;
+  --accent-warm: #e84c1e;
+  --muted: #5a6478;
+  --border: rgba(12,18,32,0.1);
+  --serif: 'Noto Serif SC', serif;
+  --sans: 'Noto Sans SC', sans-serif;
+  --mono: 'DM Mono', monospace;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior: smooth; }
+body { background:#fff; color:var(--ink); font-family:var(--sans); overflow-x:hidden; }
+
+/* ── NAV ── */
+nav {
+  position:fixed; top:0; left:0; right:0; z-index:100;
+  display:flex; align-items:center; justify-content:space-between;
+  padding:18px 56px;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(16px);
+  border-bottom:1px solid var(--border);
+}
+.nav-logo { display:flex; flex-direction:column; gap:1px; text-decoration:none; }
+.nav-logo-main { font-family:var(--mono); font-size:1.2rem; font-weight:500; letter-spacing:0.12em; color:var(--ink); }
+.nav-logo-main span { color:var(--accent); }
+.nav-logo-sub { font-family:var(--mono); font-size:0.6rem; letter-spacing:0.1em; color:var(--muted); text-transform:uppercase; }
+.nav-links { display:flex; gap:28px; align-items:center; }
+.nav-links a { font-size:0.85rem; font-weight:500; color:var(--muted); text-decoration:none; transition:color 0.2s; }
+.nav-links a:hover, .nav-links a.active { color:var(--ink); }
+.nav-cta {
+  background:var(--accent) !important; color:#fff !important;
+  padding:10px 24px; border-radius:4px; font-size:0.8rem !important;
+  font-weight:700 !important; transition:background 0.2s !important;
+}
+.nav-cta:hover { background:#0044dd !important; }
+
+/* ── ABOUT SUB NAV ── */
+.about-subnav {
+  position:sticky; top:64px; z-index:90;
+  background:#fff; border-bottom:1px solid var(--border);
+  padding:0 72px;
+  display:flex; gap:0; align-items:center;
+}
+.about-subnav a {
+  display:inline-block; padding:16px 24px;
+  font-size:0.875rem; font-weight:500; color:var(--muted);
+  text-decoration:none; border-bottom:2px solid transparent;
+  transition:color 0.2s, border-color 0.2s;
+}
+.about-subnav a:hover { color:var(--ink); }
+.about-subnav a.active { color:var(--accent); border-bottom-color:var(--accent); }
+
+/* ── HERO BANNER ── */
+.about-hero {
+  margin-top:112px;
+  height:380px;
+  background: linear-gradient(135deg, var(--ink) 0%, #0d2044 60%, #1a3a6e 100%);
+  display:flex; align-items:center; padding:0 72px;
+  position:relative; overflow:hidden;
+}
+.about-hero::before {
+  content:'';
+  position:absolute; inset:0;
+  background:
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 48px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 48px);
+}
+.about-hero::after {
+  content:'';
+  position:absolute; right:-80px; top:-80px;
+  width:500px; height:500px;
+  background: radial-gradient(circle, rgba(26,92,255,0.2) 0%, transparent 65%);
+}
+.about-hero-content { position:relative; z-index:1; }
+.about-hero-tag { font-family:var(--mono); font-size:0.7rem; letter-spacing:0.15em; color:rgba(26,92,255,0.8); text-transform:uppercase; margin-bottom:16px; }
+.about-hero-title { font-family:var(--serif); font-size:clamp(2.2rem,4vw,3.4rem); font-weight:900; color:#fff; letter-spacing:-0.025em; line-height:1.1; margin-bottom:16px; }
+.about-hero-title span { color:var(--accent); }
+.about-hero-sub { font-size:1rem; color:rgba(255,255,255,0.6); max-width:480px; line-height:1.75; }
+
+/* ── SECTION COMMONS ── */
+.section-tag { font-family:var(--mono); font-size:0.68rem; color:var(--accent); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
+.section-tag::before { content:''; display:block; width:18px; height:1px; background:var(--accent); }
+.section-h2 { font-family:var(--serif); font-size:clamp(1.8rem,3vw,2.6rem); font-weight:900; letter-spacing:-0.025em; line-height:1.12; margin-bottom:14px; }
+.section-lead { font-size:0.95rem; color:var(--muted); line-height:1.85; max-width:640px; }
+
+/* ── INTRO SECTION ── */
+.intro-section { padding:80px 72px; background:#fff; }
+.intro-grid { display:grid; grid-template-columns:1fr 1fr; gap:72px; align-items:start; }
+.intro-text p { font-size:0.95rem; color:var(--muted); line-height:1.85; margin-bottom:16px; }
+.intro-text p strong { color:var(--ink); }
+.intro-stats {
+  display:grid; grid-template-columns:1fr 1fr;
+  gap:2px; background:var(--border);
+  border:1px solid var(--border); margin-top:36px;
+}
+.istat {
+  background:#fff; padding:28px 24px;
+  display:flex; flex-direction:column; gap:6px;
+  transition:background 0.2s;
+}
+.istat:hover { background:#f0f4ff; }
+.istat-val { font-family:var(--mono); font-size:1.8rem; font-weight:500; color:var(--ink); line-height:1; }
+.istat-val span { color:var(--accent); font-size:1rem; }
+.istat-key { font-size:0.78rem; color:var(--muted); letter-spacing:0.04em; }
+/* Warehouse visual card */
+.intro-visual {
+  background:linear-gradient(135deg, var(--ink) 0%, #132040 100%);
+  border-radius:16px; overflow:hidden; position:relative;
+}
+.intro-visual-img {
+  width:100%; aspect-ratio:4/3;
+  background:
+    linear-gradient(180deg, rgba(12,18,32,0) 40%, rgba(12,18,32,0.85) 100%),
+    url('https://images.unsplash.com/photo-1586528116311-ad8dd3c8310d?w=800&q=80') center/cover;
+  display:flex; align-items:flex-end; padding:28px;
+}
+.intro-visual-label {
+  font-family:var(--mono); font-size:0.7rem; letter-spacing:0.1em;
+  color:rgba(255,255,255,0.7); text-transform:uppercase;
+}
+.intro-visual-title {
+  font-family:var(--serif); font-size:1.3rem; font-weight:700;
+  color:#fff; margin-top:6px;
+}
+.intro-badge-row {
+  padding:18px 24px; display:flex; gap:10px; flex-wrap:wrap;
+}
+.intro-badge {
+  background:rgba(26,92,255,0.12); border:1px solid rgba(26,92,255,0.2);
+  color:rgba(255,255,255,0.8); font-family:var(--mono);
+  font-size:0.68rem; letter-spacing:0.08em; padding:5px 14px; border-radius:100px;
+}
+
+/* ── CULTURE SECTION (flip cards) ── */
+.culture-section { padding:80px 72px; background:var(--paper); }
+.culture-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:28px; margin-top:48px; }
+.flip-card { height:340px; perspective:1000px; cursor:pointer; }
+.flip-card-inner {
+  position:relative; width:100%; height:100%;
+  transition:transform 0.7s cubic-bezier(.16,1,.3,1);
+  transform-style:preserve-3d;
+}
+.flip-card:hover .flip-card-inner,
+.flip-card.flipped .flip-card-inner { transform:rotateY(180deg); }
+.flip-front, .flip-back {
+  position:absolute; width:100%; height:100%;
+  border-radius:16px; backface-visibility:hidden;
+  -webkit-backface-visibility:hidden;
+  overflow:hidden;
+}
+/* FRONT */
+.flip-front {
+  background:linear-gradient(135deg, var(--accent) 0%, #0044dd 100%);
+  display:flex; flex-direction:column; align-items:center; justify-content:center; gap:20px;
+  padding:40px 32px; text-align:center;
+}
+.flip-front-icon { font-size:3.5rem; }
+.flip-front-title { font-family:var(--serif); font-size:1.6rem; font-weight:900; color:#fff; letter-spacing:-0.02em; }
+.flip-hint { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; color:rgba(255,255,255,0.5); text-transform:uppercase; margin-top:8px; }
+/* BACK */
+.flip-back {
+  background:#fff; border:1px solid var(--border);
+  transform:rotateY(180deg);
+  display:flex; flex-direction:column; padding:36px 32px;
+}
+.flip-back-tag { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.14em; color:var(--accent); text-transform:uppercase; margin-bottom:14px; }
+.flip-back-title { font-family:var(--serif); font-size:1.3rem; font-weight:900; color:var(--ink); margin-bottom:16px; letter-spacing:-0.01em; }
+.flip-back-body { font-size:0.83rem; color:var(--muted); line-height:1.8; flex:1; }
+.flip-back-footer { margin-top:16px; display:flex; align-items:center; gap:8px; }
+.flip-dot { width:8px; height:8px; background:var(--accent); border-radius:50%; flex-shrink:0; }
+
+/* Color variants */
+.flip-card:nth-child(1) .flip-front { background:linear-gradient(135deg,#1a5cff 0%,#0033bb 100%); }
+.flip-card:nth-child(2) .flip-front { background:linear-gradient(135deg,#0c1220 0%,#1a2a4a 100%); }
+.flip-card:nth-child(3) .flip-front { background:linear-gradient(135deg,#1a5cff 0%,#0c1220 100%); }
+
+/* ── MILESTONES ── */
+.milestones-section { padding:80px 72px; background:#fff; }
+.timeline { position:relative; max-width:800px; margin:48px auto 0; }
+.timeline::before { content:''; position:absolute; left:50%; top:0; bottom:0; width:1px; background:var(--border); transform:translateX(-50%); }
+.tl-item { display:grid; grid-template-columns:1fr auto 1fr; gap:32px; align-items:center; margin-bottom:40px; }
+.tl-item:nth-child(odd) .tl-content { text-align:right; }
+.tl-item:nth-child(even) .tl-content { grid-column:3; text-align:left; }
+.tl-item:nth-child(even) .tl-empty { grid-column:1; grid-row:1; }
+.tl-dot-wrap { display:flex; justify-content:center; }
+.tl-dot { width:16px; height:16px; background:var(--accent); border-radius:50%; border:3px solid #fff; box-shadow:0 0 0 2px var(--accent); flex-shrink:0; }
+.tl-year { font-family:var(--mono); font-size:0.7rem; color:var(--accent); letter-spacing:0.1em; margin-bottom:6px; }
+.tl-title { font-family:var(--serif); font-size:1rem; font-weight:700; margin-bottom:6px; }
+.tl-desc { font-size:0.82rem; color:var(--muted); line-height:1.65; }
+
+/* ── CONTACT SECTION ── */
+.contact-page { padding:80px 72px; background:var(--paper); }
+.contact-header { display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start; }
+.contact-info-block { display:flex; flex-direction:column; gap:0; }
+.ci-item {
+  display:flex; gap:18px; align-items:flex-start;
+  padding:22px 0; border-bottom:1px solid var(--border);
+}
+.ci-item:last-child { border-bottom:none; }
+.ci-icon-wrap {
+  width:44px; height:44px; flex-shrink:0;
+  background:rgba(26,92,255,0.08);
+  border:1px solid rgba(26,92,255,0.15);
+  border-radius:50%; display:flex; align-items:center; justify-content:center;
+  font-size:1.1rem;
+}
+.ci-content label { font-family:var(--mono); font-size:0.65rem; letter-spacing:0.12em; text-transform:uppercase; color:var(--muted); display:block; margin-bottom:5px; }
+.ci-content span { font-size:0.9rem; font-weight:500; color:var(--ink); }
+.ci-content a { color:var(--accent); text-decoration:none; font-size:0.9rem; font-weight:500; }
+.ci-content a:hover { text-decoration:underline; }
+.ci-sub { font-size:0.78rem; color:var(--muted); margin-top:3px; display:block; }
+/* Map placeholder */
+.map-placeholder {
+  background:linear-gradient(135deg, var(--ink) 0%, #132040 100%);
+  border-radius:16px; overflow:hidden; height:340px;
+  display:flex; flex-direction:column; justify-content:flex-end;
+  padding:28px; position:relative;
+}
+.map-placeholder::before {
+  content:'';
+  position:absolute; inset:0;
+  background:
+    repeating-linear-gradient(0deg, rgba(26,92,255,0.04) 0, rgba(26,92,255,0.04) 1px, transparent 1px, transparent 40px),
+    repeating-linear-gradient(90deg, rgba(26,92,255,0.04) 0, rgba(26,92,255,0.04) 1px, transparent 1px, transparent 40px);
+}
+.map-pin-area {
+  position:absolute; top:50%; left:50%; transform:translate(-50%,-60%); z-index:1;
+  display:flex; flex-direction:column; align-items:center; gap:0;
+}
+.map-pin { font-size:2.5rem; }
+.map-pulse {
+  width:60px; height:60px; border-radius:50%;
+  background:rgba(26,92,255,0.15);
+  border:1px solid rgba(26,92,255,0.3);
+  display:flex; align-items:center; justify-content:center;
+  margin-top:-10px;
+  animation:pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100%{transform:scale(1);opacity:0.8;} 50%{transform:scale(1.15);opacity:0.4;} }
+.map-label {
+  position:relative; z-index:1;
+}
+.map-label-addr { font-family:var(--mono); font-size:0.7rem; letter-spacing:0.08em; color:rgba(255,255,255,0.5); text-transform:uppercase; margin-bottom:4px; }
+.map-label-title { font-family:var(--serif); font-size:1.2rem; font-weight:700; color:#fff; }
+.map-cta {
+  position:relative; z-index:1; margin-top:16px;
+  display:inline-flex; align-items:center; gap:8px;
+  background:var(--accent); color:#fff; padding:10px 22px;
+  border-radius:6px; font-size:0.8rem; font-weight:700;
+  text-decoration:none; transition:background 0.2s; width:fit-content;
+}
+.map-cta:hover { background:#0044dd; }
+/* CTA Banner */
+.contact-cta-banner {
+  margin-top:60px;
+  background:linear-gradient(135deg,var(--accent) 0%,#0044dd 100%);
+  border-radius:16px; padding:48px 56px;
+  display:flex; align-items:center; justify-content:space-between; gap:32px;
+}
+.contact-cta-banner h3 { font-family:var(--serif); font-size:1.8rem; font-weight:900; color:#fff; letter-spacing:-0.02em; }
+.contact-cta-banner p { color:rgba(255,255,255,0.7); font-size:0.9rem; margin-top:10px; }
+.btn-white-cta {
+  background:#fff; color:var(--accent); padding:14px 36px;
+  font-size:0.875rem; font-weight:700; border:none; border-radius:8px;
+  cursor:pointer; text-decoration:none; white-space:nowrap;
+  transition:transform 0.2s, box-shadow 0.2s; display:inline-block;
+}
+.btn-white-cta:hover { transform:translateY(-2px); box-shadow:0 8px 24px rgba(0,0,0,0.15); }
+
+/* ── FOOTER ── */
+footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255,0.06); }
+.footer-main {
+  padding:56px 72px 40px;
+  display:grid; grid-template-columns:1.8fr 1fr 1fr 1fr; gap:48px;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+}
+.footer-name { font-family:var(--mono); font-size:1.1rem; font-weight:500; color:#fff; letter-spacing:0.1em; margin-bottom:8px; }
+.footer-name span { color:var(--accent); }
+.footer-tagline { font-family:var(--mono); font-size:0.6rem; color:rgba(255,255,255,0.3); letter-spacing:0.08em; margin-bottom:16px; }
+.footer-desc { font-size:0.82rem; color:rgba(255,255,255,0.4); line-height:1.75; margin-bottom:20px; }
+.footer-email-link { display:inline-flex; align-items:center; gap:8px; font-family:var(--mono); font-size:0.72rem; color:var(--accent); text-decoration:none; border-bottom:1px solid rgba(26,92,255,0.3); padding-bottom:2px; }
+.footer-email-link:hover { border-color:var(--accent); }
+.footer-col-title { font-family:var(--mono); font-size:0.68rem; color:rgba(255,255,255,0.45); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:18px; }
+.footer-links { display:flex; flex-direction:column; gap:10px; }
+.footer-links a { font-size:0.83rem; color:rgba(255,255,255,0.5); text-decoration:none; transition:color 0.2s; }
+.footer-links a:hover { color:#fff; }
+.footer-contact-item { display:flex; gap:10px; align-items:flex-start; margin-bottom:12px; }
+.fci-icon { font-size:0.85rem; margin-top:2px; flex-shrink:0; }
+.fci-text { font-size:0.8rem; color:rgba(255,255,255,0.45); line-height:1.55; }
+.fci-text a { color:var(--accent); text-decoration:none; }
+.fci-text a:hover { text-decoration:underline; }
+.footer-bottom { padding:18px 72px; display:flex; justify-content:space-between; align-items:center; }
+.footer-copy { font-family:var(--mono); font-size:0.63rem; color:rgba(255,255,255,0.2); letter-spacing:0.06em; }
+.footer-bottom-links { display:flex; gap:20px; }
+.footer-bottom-links a { font-family:var(--mono); font-size:0.63rem; color:rgba(255,255,255,0.3); text-decoration:none; }
+.footer-bottom-links a:hover { color:rgba(255,255,255,0.7); }
+
+/* ── ANIMATIONS ── */
+.reveal { opacity:0; transform:translateY(24px); transition:opacity 0.65s ease, transform 0.65s ease; }
+.reveal.visible { opacity:1 !important; transform:translateY(0) !important; }
+
+/* ── DROPDOWN (global) ── */
+.nav-dropdown{position:relative;}
+.nav-dropdown>a{display:flex;align-items:center;gap:5px;cursor:default;}
+.nav-dropdown>a::after{content:'';display:inline-block;width:6px;height:6px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg);margin-top:-3px;transition:transform .2s;}
+.nav-dropdown:hover>a::after{transform:rotate(-135deg);margin-top:2px;}
+.nav-dropdown::after{content:'';position:absolute;top:100%;left:-30px;right:-30px;height:28px;}
+.dropdown-menu{display:none;position:absolute;top:calc(100% + 16px);left:50%;transform:translateX(-50%);background:#fff;border:1px solid var(--border);border-radius:12px;padding:8px;min-width:240px;box-shadow:0 16px 48px rgba(12,18,32,.12);z-index:200;}
+.dropdown-menu::before{content:'';position:absolute;top:-8px;left:50%;width:16px;height:16px;background:#fff;border-left:1px solid var(--border);border-top:1px solid var(--border);transform:translateX(-50%) rotate(45deg);}
+.nav-dropdown:hover .dropdown-menu{display:block;animation:ddFade .18s ease;}
+@keyframes ddFade{from{opacity:0;transform:translateX(-50%) translateY(-6px);}to{opacity:1;transform:translateX(-50%) translateY(0);}}
+.dd-item{display:block;padding:14px 20px;border-radius:8px;text-decoration:none;color:var(--ink);transition:background .15s;}
+.dd-item:hover{background:rgba(26,92,255,.08);}
+.dd-name{font-size:.9rem;font-weight:600;color:var(--ink);line-height:1.3;}.lang-dropdown .dropdown-menu{min-width:160px;}
+
+/* ── RESPONSIVE ── */
+@media (max-width:960px) {
+  nav{padding:14px 24px;}
+  .nav-links{display:none;}
+  .contact-header { grid-template-columns:1fr; gap:40px; }
+  .contact-cta-banner { flex-direction:column; padding:36px 28px; }
+  .timeline::before { left:20px; }
+  .tl-item { grid-template-columns:auto 1fr; }
+  .tl-item:nth-child(odd) .tl-content, .tl-item:nth-child(even) .tl-content { text-align:left; grid-column:2; }
+  .footer-main { grid-template-columns:1fr 1fr; gap:32px; padding:40px 24px 32px; }
+  .footer-bottom { flex-direction:column; gap:10px; text-align:center; padding:16px 24px; }
+}
+  /* ── FOOTER ── */
+  footer{background:var(--ink);padding:0;border-top:1px solid rgba(255,255,255,.06);}
+  .footer-main{padding:64px 72px 48px;display:grid;grid-template-columns:1.8fr 1fr 1fr 1fr;gap:56px;border-bottom:1px solid rgba(255,255,255,.08);}
+  .footer-name{font-family:var(--mono);font-size:1.05rem;font-weight:500;color:#fff;letter-spacing:.1em;margin-bottom:8px;}
+  .footer-name span{color:var(--accent);}
+  .footer-tagline{font-family:var(--mono);font-size:.6rem;color:rgba(255,255,255,.3);letter-spacing:.08em;margin-bottom:14px;}
+  .footer-desc{font-size:.82rem;color:rgba(255,255,255,.4);line-height:1.75;}
+  .footer-col-title{font-family:var(--mono);font-size:.68rem;color:rgba(255,255,255,.45);letter-spacing:.14em;text-transform:uppercase;margin-bottom:18px;}
+  .footer-links{display:flex;flex-direction:column;gap:10px;}
+  .footer-links a{font-size:.83rem;color:rgba(255,255,255,.5);text-decoration:none;transition:color .2s;}
+  .footer-links a:hover{color:#fff;}
+  .footer-contact-item{display:flex;gap:10px;align-items:flex-start;margin-bottom:12px;}
+  .fci-icon{font-size:.85rem;margin-top:2px;flex-shrink:0;}
+  .fci-text{font-size:.8rem;color:rgba(255,255,255,.45);line-height:1.55;}
+  .fci-text a{color:var(--accent);text-decoration:none;}
+  .fci-text a:hover{text-decoration:underline;}
+  .footer-bottom{padding:20px 72px;display:flex;justify-content:space-between;align-items:center;}
+  .footer-copy{font-family:var(--mono);font-size:.63rem;color:rgba(255,255,255,.2);letter-spacing:.06em;}
+  .footer-bottom-links{display:flex;gap:20px;}
+  .footer-bottom-links a{font-family:var(--mono);font-size:.63rem;color:rgba(255,255,255,.3);text-decoration:none;transition:color .2s;}
+  .footer-bottom-links a:hover{color:rgba(255,255,255,.7);}
+  @media(max-width:960px){
+    .footer-main{grid-template-columns:1fr 1fr;gap:32px;padding:48px 24px 36px;}
+    .footer-bottom{flex-direction:column;gap:10px;text-align:center;padding:16px 24px;}
+  }
+
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a class="nav-logo" href="indexCN.html">
+    <div class="nav-logo-main">SMART<span>MOVE</span></div>
+    <div class="nav-logo-sub">Trade Solutions · Boston, MA</div>
+  </a>
+  <div class="nav-links">
+    <a href="indexCN.html">首页</a>
+    <div class="nav-dropdown">
+      <a href="javascript:void(0)">探索</a>
+      <div class="dropdown-menu">
+        <a class="dd-item" href="servicesCN.html">
+          
+          <span class="dd-name">核心服务</span>
+        </a>
+        <a class="dd-item" href="focusCN.html">
+          
+          <span class="dd-name">专注领域</span>
+        </a>
+        <a class="dd-item" href="whyCN.html">
+          
+          <span class="dd-name">商业信任</span>
+        </a>
+        <a class="dd-item" href="platformsCN.html">
+          
+          <span class="dd-name">平台合作</span>
+        </a>
+      </div>
+    </div>
+    <a href="aboutusCN.html">关于我们</a>
+    <a href="contactCN.html">联系我们</a>
+    <a href="indexCN.html#contact" class="nav-cta">立即合作</a>
+  </div>
+</nav>
+
+<!-- SUB NAV -->
+<div class="about-subnav">
+  <a href="#intro" class="active">公司介绍</a>
+  <a href="contactCN.html">联系我们</a>
+</div>
+
+<!-- HERO BANNER -->
+<div class="about-hero">
+  <div class="about-hero-content">
+    <div class="about-hero-tag">About SMTS</div>
+    <h1 class="about-hero-title">让每一个中国品牌<br>都能<span>丝滑出海</span>美国</h1>
+    <p class="about-hero-sub">成立于2024年6月，Temu波士顿官方合作仓之一，致力于为中国跨境卖家提供美国本土高效履约服务。</p>
+  </div>
+</div>
+
+<!-- INTRO -->
+<section class="intro-section" id="intro">
+  <div class="intro-grid">
+    <div class="intro-text">
+      <div class="section-tag">企业介绍</div>
+      <h2 class="section-h2">Smart Move Trade<br>Solutions Inc</h2>
+      <p>Smart Move Trade Solutions Inc（SMTS）成立于<strong>2024年6月</strong>，是一家位于美国马萨诸塞州波士顿的跨境供应链服务公司，现为 <strong>Temu 波士顿官方合作仓之一</strong>。</p>
+      <p>自成立以来，SMTS 凭借专业的本土运营团队和高效的仓储履约能力，致力于为中国品牌和跨境电商卖家搭建稳定可靠的美国供应链体系，帮助卖家实现从中国到美国买家手中的全链路顺畅履约。</p>
+      <p>截至目前，SMTS 拥有 <strong>20,000 sqft</strong> 专业仓储空间，25 人本地团队，服务超过 <strong>80+ 平台卖家</strong>，业务涵盖 Temu、Shein、TikTok Shop、Etsy、Shopify 等主流跨境电商平台，累计为卖家发货超过 <strong>230 万单</strong>，日单量最高峰达 <strong>17,000 单</strong>。</p>
+      <div class="intro-stats reveal">
+        <div class="istat">
+          <div class="istat-val">80<span>+</span></div>
+          <div class="istat-key">服务平台卖家</div>
+        </div>
+        <div class="istat">
+          <div class="istat-val">230<span>万+</span></div>
+          <div class="istat-key">累计发货量</div>
+        </div>
+        <div class="istat">
+          <div class="istat-val">70,000<span>+</span></div>
+          <div class="istat-key">仓库 SKU</div>
+        </div>
+        <div class="istat">
+          <div class="istat-val">17,000<span>单</span></div>
+          <div class="istat-key">日单量峰值</div>
+        </div>
+      </div>
+    </div>
+    <div class="reveal">
+      <div class="intro-visual">
+        <div class="intro-visual-img">
+          <div>
+            <div class="intro-visual-label">East Coast Fulfillment Center</div>
+            <div class="intro-visual-title">波士顿 · 美国东海岸</div>
+          </div>
+        </div>
+        <div class="intro-badge-row">
+          <span class="intro-badge">TEMU 官方合作仓</span>
+          <span class="intro-badge">20,000 sqft</span>
+          <span class="intro-badge">25人本地团队</span>
+          <span class="intro-badge">成立于 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CULTURE -->
+<section class="culture-section" id="culture">
+  <div class="section-tag reveal">企业文化</div>
+  <h2 class="section-h2 reveal">我们的使命 · 愿景 · 价值观</h2>
+  <p class="section-lead reveal">悬停或点击卡片，了解 SMTS 的核心理念</p>
+
+  <div class="culture-grid">
+    <!-- 使命 -->
+    <div class="flip-card reveal">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div class="flip-front-icon">🎯</div>
+          <div class="flip-front-title">使命</div>
+          <div class="flip-hint">悬停查看详情 →</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-tag">Mission · 使命</div>
+          <div class="flip-back-title">让中国商品更快抵达美国买家</div>
+          <div class="flip-back-body">
+            致力于成为连接中美电商的核心供应链服务商。通过精准高效的仓储履约，为全球跨境卖家提供仓储、配送、售后一体化解决方案，打造高效、高性价比、精准、敏捷的本土化物流服务体系，让每一个中国品牌都能顺畅出海。
+          </div>
+          <div class="flip-back-footer">
+            <div class="flip-dot"></div>
+            <span style="font-family:var(--mono);font-size:0.65rem;color:var(--muted);letter-spacing:0.06em">SMTS MISSION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 愿景 -->
+    <div class="flip-card reveal" style="transition-delay:0.1s">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div class="flip-front-icon">🚀</div>
+          <div class="flip-front-title">愿景</div>
+          <div class="flip-hint">悬停查看详情 →</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-tag">Vision · 愿景</div>
+          <div class="flip-back-title">让普通人也能轻松一站式出海</div>
+          <div class="flip-back-body">
+            成为全球知名的美国本土跨境电商仓储履约标杆企业。我们相信，出海不只是大公司的特权——我们的愿景是让每一个普通创业者、每一个中小卖家都能借助 SMTS 的力量，以最低门槛实现真正的全球化销售。
+          </div>
+          <div class="flip-back-footer">
+            <div class="flip-dot"></div>
+            <span style="font-family:var(--mono);font-size:0.65rem;color:var(--muted);letter-spacing:0.06em">SMTS VISION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 价值观 -->
+    <div class="flip-card reveal" style="transition-delay:0.2s">
+      <div class="flip-card-inner">
+        <div class="flip-front">
+          <div class="flip-front-icon">💎</div>
+          <div class="flip-front-title">价值观</div>
+          <div class="flip-hint">悬停查看详情 →</div>
+        </div>
+        <div class="flip-back">
+          <div class="flip-back-tag">Values · 价值观</div>
+          <div class="flip-back-title">尊重 · 务实 · 卓越 · 共赢</div>
+          <div class="flip-back-body">
+            <strong style="color:var(--ink)">尊重</strong>：尊重每一位卖家的需求与信任，以合作伙伴而非服务供应商的姿态相处。<br><br>
+            <strong style="color:var(--ink)">务实</strong>：不讲空话，以结果为导向，用数据和行动说话。<br><br>
+            <strong style="color:var(--ink)">卓越</strong>：在每一个包裹、每一次发货中追求极致，99.9% 准确率是底线不是目标。<br><br>
+            <strong style="color:var(--ink)">共赢</strong>：卖家的成功是 SMTS 的成功，我们的目标是让每一位合作卖家持续增长。
+          </div>
+          <div class="flip-back-footer">
+            <div class="flip-dot"></div>
+            <span style="font-family:var(--mono);font-size:0.65rem;color:var(--muted);letter-spacing:0.06em">SMTS VALUES</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MILESTONES -->
+<section class="milestones-section" id="milestones">
+  <div class="section-tag reveal">发展历程</div>
+  <h2 class="section-h2 reveal">从零到一，稳步成长</h2>
+  <div class="timeline">
+    <div class="tl-item reveal">
+      <div class="tl-content">
+        <div class="tl-year">2024 年 4 月</div>
+        <div class="tl-title">SMTS 正式成立</div>
+        <div class="tl-desc">Smart Move Trade Solutions Inc 在美国马萨诸塞州注册成立，启动东海岸仓储基础设施建设。</div>
+      </div>
+      <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+      <div></div>
+    </div>
+    <div class="tl-item reveal">
+      <div></div>
+      <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+      <div class="tl-content">
+        <div class="tl-year">2024 年 6 月</div>
+        <div class="tl-title">仓库完成搭建，正式开仓</div>
+        <div class="tl-desc">波士顿仓库 20,000 sqft 全面建成投入运营，25 人本地团队到位，开始接受首批卖家入驻。</div>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-content">
+        <div class="tl-year">2024 年 9 月</div>
+        <div class="tl-title">大量平台卖家入驻</div>
+        <div class="tl-desc">Temu、Shein、TikTok Shop、Etsy、Shopify 等多平台卖家批量入驻，日单量快速攀升，仓储运营走上正轨。</div>
+      </div>
+      <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+      <div></div>
+    </div>
+    <div class="tl-item reveal">
+      <div></div>
+      <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+      <div class="tl-content">
+        <div class="tl-year">2025 年 2 月</div>
+        <div class="tl-title">成为 Temu 官方合作仓</div>
+        <div class="tl-desc">经 Temu 平台严格认证，正式成为 Temu 波士顿官方合作仓之一，为 Temu 卖家提供本土仓储履约优先服务。</div>
+      </div>
+    </div>
+    <div class="tl-item reveal">
+      <div class="tl-content">
+        <div class="tl-year">2025 年 6 月</div>
+        <div class="tl-title">扩展多平台系统对接</div>
+        <div class="tl-desc">完成领星、极风 WMS 系统深度集成，全面支持多平台订单自动同步，仓库 SKU 突破 70,000+。</div>
+      </div>
+      <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+      <div></div>
+    </div>
+    <div class="tl-item reveal">
+      <div></div>
+      <div class="tl-dot-wrap"><div class="tl-dot"></div></div>
+      <div class="tl-content">
+        <div class="tl-year">2026 年</div>
+        <div class="tl-title">累计发货突破 230 万单</div>
+        <div class="tl-desc">服务卖家超 80 家，日单量峰值达 17,000 单，持续扩大仓储服务能力，助力更多中国品牌出海美国。</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-main">
+    <div>
+      <div class="footer-name">SMART<span>MOVE</span> TRADE SOLUTIONS</div>
+      <div class="footer-tagline">Boston, MA · East Coast Fulfillment Center</div>
+      <p class="footer-desc">为中国跨境卖家提供美国本土仓储履约服务。Temu 波士顿官方合作仓之一。</p>
+    </div>
+    <div>
+      <div class="footer-col-title">核心服务</div>
+      <div class="footer-links">
+        <a href="servicesCN.html">仓储 & 履约</a>
+        <a href="focusCN.html">专注领域</a>
+        <a href="whyCN.html">为什么选我们</a>
+        <a href="platformsCN.html">支持平台</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">了解更多</div>
+      <div class="footer-links">
+        <a href="aboutusCN.html">关于我们</a>
+        <a href="contactCN.html">联系我们</a>
+      </div>
+    </div>
+    <div>
+      <div class="footer-col-title">联系方式</div>
+      <div class="footer-contact-item"><span class="fci-icon">📞</span><div class="fci-text"><a href="tel:+16173061118">+1 (617) 306-1118</a></div></div>
+      <div class="footer-contact-item"><span class="fci-icon">📧</span><div class="fci-text"><a href="mailto:smartmovetradesolutions@gmail.com">smartmovetradesolutions@gmail.com</a></div></div>
+      <div class="footer-contact-item"><span class="fci-icon">📍</span><div class="fci-text">61 Pleasant St,<br>Randolph, MA 02368</div></div>
+      <div class="footer-contact-item"><span class="fci-icon">🕐</span><div class="fci-text">Mon–Fri 9:00–18:00 EST</div></div>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="footer-copy">© 2025 Smart Move Trade Solutions Inc · All Rights Reserved</div>
+    <div class="footer-bottom-links">
+      <a href="indexCN.html">首页</a>
+      <a href="aboutusCN.html">关于我们</a>
+      <a href="contactCN.html">联系我们</a>
+    </div>
+  </div>
+</footer>
+<script>
+(function(){
+  function c(){document.querySelectorAll('.reveal').forEach(function(el){
+    if(el.getBoundingClientRect().top<window.innerHeight+80)el.classList.add('visible');
+  });}
+  c();window.addEventListener('scroll',c,{passive:true});
+  window.addEventListener('load',c);setTimeout(c,300);
+})();
+(function(){
+  var sections=['intro','milestones'];
+  var links=document.querySelectorAll('.about-subnav a');
+  window.addEventListener('scroll',function(){
+    var cur='intro';
+    sections.forEach(function(id){var el=document.getElementById(id);if(el&&window.scrollY>=el.offsetTop-160)cur=id;});
+    links.forEach(function(a){a.classList.toggle('active',a.getAttribute('href')==='#'+cur);});
+  },{passive:true});
+})();
+document.querySelectorAll('.flip-card').forEach(function(card){
+  card.addEventListener('click',function(){this.classList.toggle('flipped');});
+});
+</script>
+</body>
+</html>
