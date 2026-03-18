@@ -93,6 +93,8 @@ nav {
 .about-hero-title { font-family:var(--serif); font-size:clamp(2.2rem,4vw,3.4rem); font-weight:900; color:#fff; letter-spacing:-0.025em; line-height:1.1; margin-bottom:16px; }
 .about-hero-title span { color:var(--accent); }
 .about-hero-sub { font-size:1rem; color:rgba(255,255,255,0.78); max-width:520px; line-height:1.82; }
+.about-hero-notes { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+.about-hero-note { display:inline-flex; align-items:center; padding:10px 14px; border-radius:999px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.16); color:#fff; font-size:0.74rem; line-height:1.2; }
 
 /* ── SECTION COMMONS ── */
 .section-tag { font-family:var(--mono); font-size:0.68rem; color:var(--accent); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
@@ -461,6 +463,7 @@ footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255
       bottom: 18px;
       border-radius: 22px;
     }
+    .about-hero-note { width: 100%; justify-content: center; }
     .intro-section,
     .culture-section,
     .milestones-section,
@@ -544,8 +547,13 @@ footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255
 <div class="about-hero">
   <div class="about-hero-content">
     <div class="about-hero-tag">About SMTS</div>
-    <h1 class="about-hero-title">Helping Every Brand<br>Go <span>Global</span> with Ease</h1>
-    <p class="about-hero-sub">Founded in June 2024, one of Temu's official partner warehouses in Boston, dedicated to providing efficient US-based fulfillment services for cross-border e-commerce sellers.</p>
+    <h1 class="about-hero-title">Built for Chinese Brands<br>Scaling into the <span>U.S.</span></h1>
+    <p class="about-hero-sub">Founded in June 2024, SMTS is one of Temu's official partner warehouses in Boston, helping cross-border sellers build faster, more dependable fulfillment on the ground in the United States.</p>
+    <div class="about-hero-notes">
+      <span class="about-hero-note">Boston, MA</span>
+      <span class="about-hero-note">Founded in 2024</span>
+      <span class="about-hero-note">Official Temu Boston partner warehouse</span>
+    </div>
   </div>
 </div>
 

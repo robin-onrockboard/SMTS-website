@@ -34,6 +34,8 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .about-hero-tag{display:inline-flex;align-items:center;padding:8px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid rgba(255,255,255,.14);font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;color:rgba(255,255,255,.82);text-transform:uppercase;margin-bottom:16px;}
 .about-hero-title{font-family:var(--serif);font-size:clamp(2rem,4vw,3rem);font-weight:900;color:#fff;letter-spacing:-.025em;line-height:1.1;margin-bottom:14px;}
 .about-hero-sub{font-size:.95rem;color:rgba(255,255,255,.78);line-height:1.82;max-width:520px;}
+.about-hero-notes{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px;}
+.about-hero-note{display:inline-flex;align-items:center;padding:10px 14px;border-radius:999px;background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.16);color:#fff;font-size:.74rem;line-height:1.2;}
 .section-tag{font-family:var(--mono);font-size:.68rem;color:var(--accent);letter-spacing:.14em;text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:10px;}
 .section-tag::before{content:"";display:block;width:18px;height:1px;background:var(--accent);}
 .contact-main{padding:80px 72px;background:var(--paper);}
@@ -226,6 +228,7 @@ footer{background:var(--ink);padding:0;border-top:1px solid rgba(255,255,255,.06
       bottom: 18px;
       border-radius: 22px;
     }
+    .about-hero-note{width:100%;justify-content:center;}
     .contact-main,
     .form-section { padding: 56px 20px; }
     .map-card { height: 320px; }
@@ -318,6 +321,11 @@ footer{background:var(--ink);padding:0;border-top:1px solid rgba(255,255,255,.06
     <div class="about-hero-tag">Contact Us</div>
     <h1 class="about-hero-title">联系我们</h1>
     <p class="about-hero-sub">美国东部时间工作，支持中英文双语沟通<br>工作日内快速响应，欢迎实地参观仓库</p>
+    <div class="about-hero-notes">
+      <span class="about-hero-note">Boston, MA</span>
+      <span class="about-hero-note">1 个工作日内回复</span>
+      <span class="about-hero-note">中英双语沟通</span>
+    </div>
   </div>
 </div>
 <section class="contact-main">

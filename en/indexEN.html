@@ -250,6 +250,37 @@
     align-items: center;
     animation: fadeUp 0.8s 0.28s ease both;
   }
+  .hero-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+    animation: fadeUp 0.8s 0.34s ease both;
+  }
+  .hero-summary-item {
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(12,18,32,0.045);
+    border: 1px solid rgba(12,18,32,0.08);
+    box-shadow: 0 10px 20px rgba(12,18,32,0.05);
+    min-width: 132px;
+  }
+  .hero-summary-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .hero-summary-value {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.35;
+  }
   .btn-primary {
     background: var(--accent);
     color: #fff;
@@ -1395,6 +1426,13 @@
       justify-content: center;
       text-align: center;
     }
+    .hero-summary {
+      gap: 10px;
+    }
+    .hero-summary-item {
+      width: 100%;
+      min-width: 0;
+    }
     section,
     .focus-section,
     .about-strip,
@@ -1474,6 +1512,20 @@
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Get Free Consultation</a>
       <a href="#services" class="btn-ghost">View Our Services</a>
+    </div>
+    <div class="hero-summary">
+      <div class="hero-summary-item">
+        <span class="hero-summary-label">Location</span>
+        <span class="hero-summary-value">Boston, MA</span>
+      </div>
+      <div class="hero-summary-item">
+        <span class="hero-summary-label">Capacity</span>
+        <span class="hero-summary-value">20,000+ orders / day</span>
+      </div>
+      <div class="hero-summary-item">
+        <span class="hero-summary-label">Operating Model</span>
+        <span class="hero-summary-value">Bilingual fulfillment team</span>
+      </div>
     </div>
   </div>
   <div class="hero-right">
