@@ -1353,14 +1353,16 @@
     .dd-item {
       flex: 0 0 auto;
       white-space: nowrap;
-      padding: 8px 12px;
+      padding: 7px 10px;
       border: 1px solid var(--border);
       border-radius: 999px;
       background: rgba(255,255,255,0.94);
       color: var(--ink);
-      font-size: 0.74rem;
+      font-size: 0.7rem;
       line-height: 1.2;
     }
+    .lang-dropdown .dd-item:first-child { display: none; }
+    .nav-cta { font-size: 0.72rem !important; }
     .nav-links > a.active {
       color: var(--accent);
       border-color: rgba(26,92,255,0.22);
@@ -1412,7 +1414,7 @@
       width: 180px;
       height: 180px;
     }
-    .hero-h1 { font-size: clamp(2.1rem, 11vw, 3.4rem); }
+    .hero-h1 { font-size: clamp(1.9rem, 9vw, 2.8rem); }
     .hero-sub { max-width: none; }
     .hero-actions {
       flex-direction: column;
@@ -1451,6 +1453,15 @@
       gap: 10px;
       text-align: center;
     }
+    .footer-name { font-size: 1.12rem; }
+    .footer-tagline { font-size: 0.68rem; line-height: 1.7; }
+    .footer-desc { font-size: 0.9rem; line-height: 1.8; color: rgba(255,255,255,0.58); }
+    .footer-col-title { font-size: 0.72rem; margin-bottom: 12px; }
+    .footer-links { gap: 12px; }
+    .footer-links a { font-size: 0.9rem; color: rgba(255,255,255,0.74); }
+    .fci-text { font-size: 0.88rem; line-height: 1.7; color: rgba(255,255,255,0.62); }
+    .footer-copy,
+    .footer-bottom-links a { font-size: 0.7rem; }
     .footer-bottom-links {
       flex-wrap: wrap;
       justify-content: center;
@@ -1485,7 +1496,7 @@
     <a href="contact.html">Contact</a>
     <div class="nav-dropdown lang-dropdown"><a href="javascript:void(0)">EN</a><div class="dropdown-menu">
       <a class="dd-item" href="index.html"><span class="dd-name">English</span></a>
-      <a class="dd-item" href="../index.html"><span class="dd-name">Simplified Chinese</span></a>
+      <a class="dd-item" href="../index.html"><span class="dd-name">Chinese</span></a>
     </div></div>
     <a href="#contact" class="nav-cta">Get Started</a>
   </div>
