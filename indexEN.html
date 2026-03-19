@@ -54,7 +54,7 @@
 }
 </script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
   :root {
     --ink: #0c1220;
@@ -64,8 +64,8 @@
     --muted: #5a6478;
     --border: rgba(12,18,32,0.1);
     --card-bg: #ffffff;
-    --serif: 'Noto Serif', serif;
-    --sans: 'Inter', sans-serif;
+    --serif: 'Noto Serif SC', serif;
+    --sans: 'Noto Sans SC', sans-serif;
     --mono: 'DM Mono', monospace;
   }
 
@@ -160,21 +160,47 @@
     padding: 80px 56px 80px 72px;
     position: relative;
   }
+  .hero-left::before {
+    content: "";
+    position: absolute;
+    inset: 42px 24px 42px 0;
+    border-radius: 28px;
+    background:
+      linear-gradient(145deg, rgba(255,255,255,0.96) 0%, rgba(255,255,255,0.82) 100%);
+    border: 1px solid rgba(12,18,32,0.08);
+    box-shadow: 0 28px 70px rgba(12,18,32,0.08);
+  }
+  .hero-left::after {
+    content: "";
+    position: absolute;
+    left: 16px;
+    top: 36px;
+    width: 220px;
+    height: 220px;
+    background: radial-gradient(circle, rgba(26,92,255,0.16) 0%, transparent 72%);
+    pointer-events: none;
+  }
+  .hero-left > * {
+    position: relative;
+    z-index: 1;
+    max-width: 560px;
+  }
   .hero-eyebrow {
     display: inline-flex;
     align-items: center;
     gap: 10px;
     margin-bottom: 28px;
+    width: fit-content;
   }
   .eyebrow-pill {
-    background: rgba(26,92,255,0.1);
-    border: 1px solid rgba(26,92,255,0.2);
+    background: rgba(26,92,255,0.08);
+    border: 1px solid rgba(26,92,255,0.16);
     color: var(--accent);
     font-family: var(--mono);
     font-size: 0.68rem;
     letter-spacing: 0.12em;
     text-transform: uppercase;
-    padding: 5px 14px;
+    padding: 7px 14px;
     border-radius: 100px;
   }
   .eyebrow-loc {
@@ -209,19 +235,51 @@
     animation: fadeUp 0.8s 0.2s ease both;
   }
   .focus-chip {
-    background: var(--ink);
+    background: rgba(12,18,32,0.92);
     color: #fff;
     font-family: var(--mono);
     font-size: 0.68rem;
     letter-spacing: 0.08em;
-    padding: 5px 12px;
-    border-radius: 2px;
+    padding: 7px 12px;
+    border-radius: 999px;
+    box-shadow: 0 10px 20px rgba(12,18,32,0.08);
   }
   .hero-actions {
     display: flex;
     gap: 16px;
     align-items: center;
     animation: fadeUp 0.8s 0.28s ease both;
+  }
+  .hero-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 26px;
+    animation: fadeUp 0.8s 0.34s ease both;
+  }
+  .hero-summary-item {
+    padding: 12px 14px;
+    border-radius: 16px;
+    background: rgba(12,18,32,0.045);
+    border: 1px solid rgba(12,18,32,0.08);
+    box-shadow: 0 10px 20px rgba(12,18,32,0.05);
+    min-width: 132px;
+  }
+  .hero-summary-label {
+    display: block;
+    font-family: var(--mono);
+    font-size: 0.62rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+    margin-bottom: 6px;
+  }
+  .hero-summary-value {
+    display: block;
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--ink);
+    line-height: 1.35;
   }
   .btn-primary {
     background: var(--accent);
@@ -954,7 +1012,8 @@
     .cta-section { grid-template-columns: 1fr; }
     .contact-inner { grid-template-columns: 1fr; }
     .form-grid { grid-template-columns: 1fr; }
-    .footer-main { grid-template-columns: 1fr 1fr; gap: 32px; padding: 48px 24px 36px; }
+    .footer-main { grid-template-columns: 1fr; gap: 28px; padding: 40px 24px 32px; }
+    .footer-name { font-size: 0.9rem; }
     .footer-bottom { flex-direction: column; gap: 10px; text-align: center; padding: 16px 24px; }
     .explore-section { padding: 0 24px 64px; }
     .explore-intro { grid-template-columns: 1fr; gap: 24px; padding: 56px 0 48px; }
@@ -1245,50 +1304,167 @@
   .explore-item:hover .ei-cta { color: var(--accent); gap: 14px; }
 
 
-  /* ── FOOTER ── */
-  footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255,.06); }
-  .footer-main { padding:64px 72px 48px; display:grid; grid-template-columns:1.8fr 1fr 1fr 1fr; gap:56px; border-bottom:1px solid rgba(255,255,255,.08); }
-  .footer-name { font-family:var(--mono); font-size:1.05rem; font-weight:500; color:#fff; letter-spacing:.1em; margin-bottom:8px; }
-  .footer-name span { color:var(--accent); }
-  .footer-tagline { font-family:var(--mono); font-size:.6rem; color:rgba(255,255,255,.3); letter-spacing:.08em; margin-bottom:16px; }
-  .footer-desc { font-size:.82rem; color:rgba(255,255,255,.4); line-height:1.75; }
-  .footer-col-title { font-family:var(--mono); font-size:.68rem; color:rgba(255,255,255,.45); letter-spacing:.14em; text-transform:uppercase; margin-bottom:18px; }
-  .footer-links { display:flex; flex-direction:column; gap:10px; }
-  .footer-links a { font-size:.83rem; color:rgba(255,255,255,.5); text-decoration:none; transition:color .2s; }
-  .footer-links a:hover { color:#fff; }
-  .footer-contact-item { display:flex; gap:10px; align-items:flex-start; margin-bottom:12px; }
-  .fci-icon { font-size:.85rem; margin-top:2px; flex-shrink:0; }
-  .fci-text { font-size:.8rem; color:rgba(255,255,255,.45); line-height:1.55; }
-  .fci-text a { color:var(--accent); text-decoration:none; }
-  .fci-text a:hover { text-decoration:underline; }
-  .footer-bottom { padding:20px 72px; display:flex; justify-content:space-between; align-items:center; }
-  .footer-copy { font-family:var(--mono); font-size:.63rem; color:rgba(255,255,255,.2); letter-spacing:.06em; }
-  .footer-bottom-links { display:flex; gap:20px; }
-  .footer-bottom-links a { font-family:var(--mono); font-size:.63rem; color:rgba(255,255,255,.3); text-decoration:none; transition:color .2s; }
-  .footer-bottom-links a:hover { color:rgba(255,255,255,.7); }
-
+  @media (max-width: 960px) {
+    nav {
+      position: sticky;
+      top: 0;
+      padding: 12px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .nav-logo-main { font-size: 1.05rem; }
+    .nav-logo-sub { font-size: 0.54rem; line-height: 1.5; }
+    .nav-links {
+      display: flex;
+      width: calc(100% + 4px);
+      margin: 0 -2px;
+      padding: 2px;
+      flex-wrap: nowrap;
+      gap: 8px;
+      align-items: center;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links > a,
+    .dd-item {
+      flex: 0 0 auto;
+      white-space: nowrap;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.94);
+      color: var(--ink);
+      font-size: 0.74rem;
+      line-height: 1.2;
+    }
+    .nav-links > a.active {
+      color: var(--accent);
+      border-color: rgba(26,92,255,0.22);
+      background: rgba(26,92,255,0.06);
+    }
+    .nav-dropdown {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      flex: 0 0 auto;
+      align-items: center;
+    }
+    .nav-dropdown > a { display: none; }
+    .nav-dropdown::after,
+    .dropdown-menu::before { display: none; }
+    .dropdown-menu {
+      display: flex;
+      position: static;
+      left: auto;
+      top: auto;
+      transform: none;
+      min-width: 0;
+      max-width: 100%;
+      padding: 0;
+      gap: 8px;
+      flex-wrap: nowrap;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    .dd-name {
+      font-size: 0.74rem;
+      white-space: nowrap;
+    }
+    .nav-cta { padding: 10px 16px !important; }
+    .hero {
+      min-height: auto;
+      grid-template-columns: 1fr;
+      padding-top: 0;
+    }
+    .hero-left { padding: 48px 20px 56px; }
+    .hero-left::before {
+      inset: 18px 0 20px;
+      border-radius: 24px;
+    }
+    .hero-left::after {
+      left: -14px;
+      top: 8px;
+      width: 180px;
+      height: 180px;
+    }
+    .hero-h1 { font-size: clamp(2.1rem, 11vw, 3.4rem); }
+    .hero-sub { max-width: none; }
+    .hero-actions {
+      flex-direction: column;
+      align-items: stretch;
+    }
+    .hero-actions a {
+      width: 100%;
+      justify-content: center;
+      text-align: center;
+    }
+    .hero-summary {
+      gap: 10px;
+    }
+    .hero-summary-item {
+      width: 100%;
+      min-width: 0;
+    }
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    section,
+    .focus-section,
+    .about-strip,
+    .cta-section { padding-left: 20px; padding-right: 20px; }
+    .explore-section { padding: 0 20px 56px; }
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 40px 20px 28px;
+    }
+    .footer-bottom {
+      padding: 16px 20px 24px;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+    .footer-bottom-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-desc,
+    .footer-links a,
+    .fci-text {
+      word-break: break-word;
+    }
+  }
+  @media (max-width: 560px) {
+    .infra-row { grid-template-columns: 1fr; }
+  }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="indexEN.html">
+  <a class="nav-logo" href="index.html">
     <div class="nav-logo-main">SMART<span>MOVE</span></div>
     <div class="nav-logo-sub">Trade Solutions · Boston, MA · Fulfillment Center</div>
   </a>
   <div class="nav-links">
-    <a href="aboutusEN.html">About Us</a>
+    <a href="aboutus.html">About Us</a>
     <div class="nav-dropdown"><a href="javascript:void(0)">Explore</a><div class="dropdown-menu">
-      <a class="dd-item" href="servicesEN.html"><span class="dd-name">Services</span></a>
-      <a class="dd-item" href="focusEN.html"><span class="dd-name">Focus Areas</span></a>
-      <a class="dd-item" href="whyEN.html"><span class="dd-name">Why SMTS</span></a>
-      <a class="dd-item" href="platformsEN.html"><span class="dd-name">Platforms</span></a>
+      <a class="dd-item" href="services.html"><span class="dd-name">Services</span></a>
+      <a class="dd-item" href="focus.html"><span class="dd-name">Focus Areas</span></a>
+      <a class="dd-item" href="why.html"><span class="dd-name">Why SMTS</span></a>
+      <a class="dd-item" href="platforms.html"><span class="dd-name">Platforms</span></a>
     </div></div>
-    <a href="contactEN.html">Contact</a>
+    <a href="contact.html">Contact</a>
     <div class="nav-dropdown lang-dropdown"><a href="javascript:void(0)">EN</a><div class="dropdown-menu">
-      <a class="dd-item" href="indexEN.html"><span class="dd-name">English</span></a>
-      <a class="dd-item" href="../indexCN.html"><span class="dd-name">Simplified Chinese</span></a>
+      <a class="dd-item" href="index.html"><span class="dd-name">English</span></a>
+      <a class="dd-item" href="../index.html"><span class="dd-name">Chinese</span></a>
     </div></div>
     <a href="#contact" class="nav-cta">Get Started</a>
   </div>
@@ -1317,6 +1493,20 @@
     <div class="hero-actions">
       <a href="#contact" class="btn-primary">Get Free Consultation</a>
       <a href="#services" class="btn-ghost">View Our Services</a>
+    </div>
+    <div class="hero-summary">
+      <div class="hero-summary-item">
+        <span class="hero-summary-label">Location</span>
+        <span class="hero-summary-value">Boston, MA</span>
+      </div>
+      <div class="hero-summary-item">
+        <span class="hero-summary-label">Capacity</span>
+        <span class="hero-summary-value">20,000+ orders / day</span>
+      </div>
+      <div class="hero-summary-item">
+        <span class="hero-summary-label">Operating Model</span>
+        <span class="hero-summary-value">Bilingual fulfillment team</span>
+      </div>
     </div>
   </div>
   <div class="hero-right">
@@ -1645,7 +1835,7 @@
     <p class="explore-right-sub">From warehousing to platform integrations, product fit to competitive advantages — click into dedicated pages for a complete view of SMTS.</p>
   </div>
   <div class="explore-items">
-    <a class="explore-item reveal" href="servicesEN.html">
+    <a class="explore-item reveal" href="services.html">
       <div class="ei-meta">
         <span class="ei-num">01 / CORE SERVICES</span>
         <div class="ei-line"></div>
@@ -1654,7 +1844,7 @@
       <div class="ei-desc">Warehousing · Pick &amp; Pack · Drop Shipping · Returns · Relabeling — full-chain fulfillment from inbound to buyer delivery.</div>
       <div class="ei-cta">Explore Services</div>
     </a>
-    <a class="explore-item reveal" href="focusEN.html" style="transition-delay:.08s">
+    <a class="explore-item reveal" href="focus.html" style="transition-delay:.08s">
       <div class="ei-meta">
         <span class="ei-num">02 / FOCUS AREA</span>
         <div class="ei-line"></div>
@@ -1663,7 +1853,7 @@
       <div class="ei-desc">Lightweight sweet spot · 5 carrier networks · Temu / Shein / TikTok Shop dedicated solutions — doing one thing exceptionally well.</div>
       <div class="ei-cta">Learn More</div>
     </a>
-    <a class="explore-item reveal" href="whyEN.html" style="transition-delay:.16s">
+    <a class="explore-item reveal" href="why.html" style="transition-delay:.16s">
       <div class="ei-meta">
         <span class="ei-num">03 / WHY CHOOSE US</span>
         <div class="ei-line"></div>
@@ -1672,7 +1862,7 @@
       <div class="ei-desc">East Coast advantage · 99.9% accuracy · Transparent pricing · Temu certified · WMS integration — 6 core strengths at a glance.</div>
       <div class="ei-cta">View Strengths</div>
     </a>
-    <a class="explore-item reveal" href="platformsEN.html" style="transition-delay:.24s">
+    <a class="explore-item reveal" href="platforms.html" style="transition-delay:.24s">
       <div class="ei-meta">
         <span class="ei-num">04 / PLATFORMS & PROCESS</span>
         <div class="ei-line"></div>
@@ -1787,8 +1977,8 @@
     <div>
       <div class="footer-col-title">Learn More</div>
       <div class="footer-links">
-        <a href="aboutusEN.html">About Us</a>
-        <a href="contactEN.html">Contact</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
     <div>
@@ -1814,9 +2004,9 @@
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 Smart Move Trade Solutions Inc · All Rights Reserved</div>
     <div class="footer-bottom-links">
-      <a href="indexEN.html">Home</a>
-      <a href="aboutusEN.html">About Us</a>
-      <a href="contactEN.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </footer>

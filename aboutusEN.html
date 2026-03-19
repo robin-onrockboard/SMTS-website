@@ -6,7 +6,7 @@
 <title>About Us — SMTS Smart Move Trade Solutions | Boston Warehouse</title>
 <meta name="description" content="SMTS was founded in June 2024 and is one of Temu's official partner warehouses in Boston. Over 2.3 million shipments processed, 80+ platform sellers served, 70,000+ warehouse SKUs.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:wght@400;700;900&family=DM+Mono:wght@400;500&family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;700;900&family=DM+Mono:wght@400;500&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
 <style>
 :root {
   --ink: #0c1220;
@@ -15,8 +15,8 @@
   --accent-warm: #e84c1e;
   --muted: #5a6478;
   --border: rgba(12,18,32,0.1);
-  --serif: 'Noto Serif', serif;
-  --sans: 'Inter', sans-serif;
+  --serif: 'Noto Serif SC', serif;
+  --sans: 'Noto Sans SC', sans-serif;
   --mono: 'DM Mono', monospace;
 }
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -66,28 +66,35 @@ nav {
 .about-hero {
   margin-top:112px;
   height:380px;
-  background: linear-gradient(135deg, var(--ink) 0%, #0d2044 60%, #1a3a6e 100%);
+  background: linear-gradient(135deg, #08101d 0%, #10264b 58%, #214c92 100%);
   display:flex; align-items:center; padding:0 72px;
-  position:relative; overflow:hidden;
+  position:relative; overflow:hidden; isolation:isolate;
 }
 .about-hero::before {
   content:'';
   position:absolute; inset:0;
   background:
-    repeating-linear-gradient(0deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 48px),
-    repeating-linear-gradient(90deg, rgba(255,255,255,0.025) 0, rgba(255,255,255,0.025) 1px, transparent 1px, transparent 48px);
+    radial-gradient(circle at 18% 20%, rgba(255,255,255,0.12) 0%, transparent 26%),
+    radial-gradient(circle at 82% 20%, rgba(26,92,255,0.28) 0%, transparent 30%),
+    repeating-linear-gradient(0deg, rgba(255,255,255,0.035) 0, rgba(255,255,255,0.035) 1px, transparent 1px, transparent 48px),
+    repeating-linear-gradient(90deg, rgba(255,255,255,0.03) 0, rgba(255,255,255,0.03) 1px, transparent 1px, transparent 48px);
 }
 .about-hero::after {
   content:'';
-  position:absolute; right:-80px; top:-80px;
-  width:500px; height:500px;
-  background: radial-gradient(circle, rgba(26,92,255,0.2) 0%, transparent 65%);
+  position:absolute; left:72px; right:72px; top:48px; bottom:48px;
+  border:1px solid rgba(255,255,255,0.12);
+  border-radius:28px;
+  background:linear-gradient(145deg, rgba(255,255,255,0.08), rgba(255,255,255,0.03));
+  backdrop-filter: blur(8px);
+  box-shadow: 0 30px 70px rgba(2,10,22,0.22);
 }
-.about-hero-content { position:relative; z-index:1; }
-.about-hero-tag { font-family:var(--mono); font-size:0.7rem; letter-spacing:0.15em; color:rgba(26,92,255,0.8); text-transform:uppercase; margin-bottom:16px; }
+.about-hero-content { position:relative; z-index:1; max-width:640px; }
+.about-hero-tag { display:inline-flex; align-items:center; padding:8px 14px; border-radius:999px; background:rgba(255,255,255,0.08); border:1px solid rgba(255,255,255,0.14); font-family:var(--mono); font-size:0.7rem; letter-spacing:0.15em; color:rgba(255,255,255,0.82); text-transform:uppercase; margin-bottom:18px; }
 .about-hero-title { font-family:var(--serif); font-size:clamp(2.2rem,4vw,3.4rem); font-weight:900; color:#fff; letter-spacing:-0.025em; line-height:1.1; margin-bottom:16px; }
 .about-hero-title span { color:var(--accent); }
-.about-hero-sub { font-size:1rem; color:rgba(255,255,255,0.6); max-width:480px; line-height:1.75; }
+.about-hero-sub { font-size:1rem; color:rgba(255,255,255,0.78); max-width:520px; line-height:1.82; }
+.about-hero-notes { display:flex; flex-wrap:wrap; gap:10px; margin-top:22px; }
+.about-hero-note { display:inline-flex; align-items:center; padding:10px 14px; border-radius:999px; background:rgba(255,255,255,0.1); border:1px solid rgba(255,255,255,0.16); color:#fff; font-size:0.74rem; line-height:1.2; }
 
 /* ── SECTION COMMONS ── */
 .section-tag { font-family:var(--mono); font-size:0.68rem; color:var(--accent); letter-spacing:0.14em; text-transform:uppercase; margin-bottom:14px; display:flex; align-items:center; gap:10px; }
@@ -371,60 +378,187 @@ footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255
     .footer-bottom{flex-direction:column;gap:10px;text-align:center;padding:16px 24px;}
   }
 
+  @media (max-width:960px) {
+    nav {
+      position: sticky;
+      top: 0;
+      padding: 12px 16px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+    .nav-logo-main { font-size: 1.05rem; }
+    .nav-logo-sub { font-size: 0.54rem; line-height: 1.5; }
+    .nav-links {
+      display: flex;
+      width: calc(100% + 4px);
+      margin: 0 -2px;
+      padding: 2px;
+      flex-wrap: nowrap;
+      gap: 8px;
+      align-items: center;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links > a,
+    .dd-item {
+      flex: 0 0 auto;
+      white-space: nowrap;
+      padding: 8px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: rgba(255,255,255,0.94);
+      color: var(--ink);
+      font-size: 0.74rem;
+      line-height: 1.2;
+    }
+    .nav-dropdown {
+      display: flex;
+      flex-direction: row;
+      gap: 8px;
+      flex: 0 0 auto;
+      align-items: center;
+    }
+    .nav-dropdown > a { display: none; }
+    .nav-dropdown::after,
+    .dropdown-menu::before { display: none; }
+    .dropdown-menu {
+      display: flex;
+      position: static;
+      left: auto;
+      top: auto;
+      transform: none;
+      min-width: 0;
+      max-width: 100%;
+      padding: 0;
+      gap: 8px;
+      flex-wrap: nowrap;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+    }
+    .dd-name { font-size: 0.74rem; white-space: nowrap; }
+    .about-subnav {
+      position: static;
+      padding: 0 20px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .about-subnav a {
+      padding: 14px 16px;
+      flex: 0 0 auto;
+    }
+    .about-hero {
+      margin-top: 0;
+      height: auto;
+      min-height: 240px;
+      padding: 32px 20px;
+    }
+    .about-hero::after {
+      left: 20px;
+      right: 20px;
+      top: 18px;
+      bottom: 18px;
+      border-radius: 22px;
+    }
+    .about-hero-note { width: 100%; justify-content: center; }
+    .reveal {
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    .intro-section,
+    .culture-section,
+    .milestones-section,
+    .contact-section { padding-left: 20px; padding-right: 20px; }
+    .flip-card { height: 440px; }
+    .footer-main {
+      grid-template-columns: 1fr;
+      gap: 22px;
+      padding: 40px 20px 28px;
+    }
+    .footer-bottom {
+      padding: 16px 20px 24px;
+      flex-direction: column;
+      gap: 10px;
+      text-align: center;
+    }
+    .footer-bottom-links {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+    .footer-desc,
+    .footer-links a,
+    .fci-text {
+      word-break: break-word;
+    }
+  }
+  @media (max-width:560px) {
+    .intro-stats { grid-template-columns: 1fr; }
+    .flip-card { height: 468px; }
+    .contact-cta-banner { padding: 28px 20px; }
+  }
 </style>
 </head>
 <body>
 
 <!-- NAV -->
 <nav>
-  <a class="nav-logo" href="indexEN.html">
+  <a class="nav-logo" href="index.html">
     <div class="nav-logo-main">SMART<span>MOVE</span></div>
     <div class="nav-logo-sub">Trade Solutions · Boston, MA</div>
   </a>
   <div class="nav-links">
-    <a href="indexEN.html">Home</a>
+    <a href="index.html">Home</a>
     <div class="nav-dropdown">
       <a href="javascript:void(0)">Explore</a>
       <div class="dropdown-menu">
-        <a class="dd-item" href="servicesEN.html">
+        <a class="dd-item" href="services.html">
           <span class="dd-name">Services</span>
         </a>
-        <a class="dd-item" href="focusEN.html">
+        <a class="dd-item" href="focus.html">
           <span class="dd-name">Focus Areas</span>
         </a>
-        <a class="dd-item" href="whyEN.html">
+        <a class="dd-item" href="why.html">
           <span class="dd-name">Why SMTS</span>
         </a>
-        <a class="dd-item" href="platformsEN.html">
+        <a class="dd-item" href="platforms.html">
           <span class="dd-name">Platforms</span>
         </a>
       </div>
     </div>
-    <a href="aboutusEN.html">About Us</a>
-    <a href="contactEN.html">Contact</a>
+    <a href="aboutus.html">About Us</a>
+    <a href="contact.html">Contact</a>
     <div class="nav-dropdown lang-dropdown">
       <a href="javascript:void(0)">EN</a>
       <div class="dropdown-menu">
-        <a class="dd-item" href="aboutusEN.html"><span class="dd-name">English</span></a>
-        <a class="dd-item" href="../aboutusCN.html"><span class="dd-name">Simplified Chinese</span></a>
+        <a class="dd-item" href="aboutus.html"><span class="dd-name">English</span></a>
+        <a class="dd-item" href="../aboutus.html"><span class="dd-name">Chinese</span></a>
       </div>
     </div>
-    <a href="indexEN.html#contact" class="nav-cta">Get Started</a>
+    <a href="index.html#contact" class="nav-cta">Get Started</a>
   </div>
 </nav>
 
 <!-- SUB NAV -->
 <div class="about-subnav">
   <a href="#intro" class="active">Company Profile</a>
-  <a href="contactEN.html">Contact Us</a>
+  <a href="contact.html">Contact Us</a>
 </div>
 
 <!-- HERO BANNER -->
 <div class="about-hero">
   <div class="about-hero-content">
     <div class="about-hero-tag">About SMTS</div>
-    <h1 class="about-hero-title">Helping Every Brand<br>Go <span>Global</span> with Ease</h1>
-    <p class="about-hero-sub">Founded in June 2024, one of Temu's official partner warehouses in Boston, dedicated to providing efficient US-based fulfillment services for cross-border e-commerce sellers.</p>
+    <h1 class="about-hero-title">Built for Chinese Brands<br>Scaling into the <span>U.S.</span></h1>
+    <p class="about-hero-sub">Founded in June 2024, SMTS is one of Temu's official partner warehouses in Boston, helping cross-border sellers build faster, more dependable fulfillment on the ground in the United States.</p>
+    <div class="about-hero-notes">
+      <span class="about-hero-note">Boston, MA</span>
+      <span class="about-hero-note">Founded in 2024</span>
+      <span class="about-hero-note">Official Temu Boston partner warehouse</span>
+    </div>
   </div>
 </div>
 
@@ -626,17 +760,17 @@ footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255
     <div>
       <div class="footer-col-title">Services</div>
       <div class="footer-links">
-        <a href="servicesEN.html">Warehousing & Fulfillment</a>
-        <a href="focusEN.html">Focus Areas</a>
-        <a href="whyEN.html">Why SMTS</a>
-        <a href="platformsEN.html">Platforms</a>
+        <a href="services.html">Warehousing & Fulfillment</a>
+        <a href="focus.html">Focus Areas</a>
+        <a href="why.html">Why SMTS</a>
+        <a href="platforms.html">Platforms</a>
       </div>
     </div>
     <div>
       <div class="footer-col-title">Learn More</div>
       <div class="footer-links">
-        <a href="aboutusEN.html">About Us</a>
-        <a href="contactEN.html">Contact</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="contact.html">Contact</a>
       </div>
     </div>
     <div>
@@ -650,9 +784,9 @@ footer { background:var(--ink); padding:0; border-top:1px solid rgba(255,255,255
   <div class="footer-bottom">
     <div class="footer-copy">© 2025 Smart Move Trade Solutions Inc · All Rights Reserved</div>
     <div class="footer-bottom-links">
-      <a href="indexEN.html">Home</a>
-      <a href="aboutusEN.html">About Us</a>
-      <a href="contactEN.html">Contact</a>
+      <a href="index.html">Home</a>
+      <a href="aboutus.html">About Us</a>
+      <a href="contact.html">Contact</a>
     </div>
   </div>
 </footer>
