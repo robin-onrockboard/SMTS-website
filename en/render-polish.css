@@ -1,0 +1,248 @@
+html,
+body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+img,
+svg,
+video,
+canvas,
+iframe {
+  max-width: 100%;
+  height: auto;
+}
+
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+label,
+td,
+th,
+li,
+small,
+strong,
+em,
+.hero-sub,
+.section-lead,
+.footer-desc,
+.fci-text,
+.ci-val,
+.ci-note,
+.info-text span,
+.dd-name,
+.map-site-title,
+.map-addr-title {
+  overflow-wrap: anywhere;
+}
+
+nav,
+section,
+footer,
+.hero,
+.hero-left,
+.hero-right,
+.hero-summary,
+.hero-summary-item,
+.about-hero,
+.about-hero-content,
+.intro-grid,
+.intro-text,
+.intro-visual,
+.hq-grid,
+.contact-main,
+.form-section-inner,
+.form-left,
+.cf-grid,
+.page-section,
+.page-hero,
+.hero-content,
+.svc-grid,
+.adv-grid,
+.platform-grid,
+.flow-steps,
+.stats-strip,
+.promise-grid,
+.services-grid,
+.focus-grid,
+.contact-inner,
+.explore-items,
+.explore-item,
+.service-nav-grid,
+.svc-hero,
+.svc-hero-text,
+.svc-features-grid,
+.svc-cta-row,
+.footer-main,
+.footer-bottom,
+.footer-links,
+.footer-contact-item,
+.about-subnav,
+.quick-item,
+.ci-row,
+.map-info,
+.intro-stats,
+.culture-grid,
+.milestone-grid,
+.timeline,
+.service-detail,
+.platform-card {
+  min-width: 0;
+}
+
+.hero-left > *,
+.hero-right > *,
+.about-hero-content > *,
+.intro-text > *,
+.intro-visual > *,
+.form-left > *,
+.ci-body,
+.footer-main > *,
+.footer-links a,
+.footer-bottom-links a,
+.timeline-item,
+.service-card,
+.adv-card,
+.promise-card,
+.explore-item > * {
+  min-width: 0;
+}
+
+.btn-primary,
+.btn-ghost,
+.btn-white,
+.nav-cta,
+.consult-btn,
+.cf-submit,
+.map-link,
+.hero-actions a,
+.cta-bar a,
+.cta-section a {
+  max-width: 100%;
+  white-space: normal;
+  word-break: break-word;
+  text-align: center;
+  justify-content: center;
+}
+
+input,
+select,
+textarea,
+button {
+  max-width: 100%;
+}
+
+textarea {
+  overflow: auto;
+}
+
+.compare-table {
+  width: 100%;
+  table-layout: fixed;
+}
+
+.compare-table th,
+.compare-table td {
+  overflow-wrap: anywhere;
+  word-break: break-word;
+}
+
+.footer-desc,
+.footer-links a,
+.fci-text,
+.info-text span,
+.ci-note,
+.ci-val,
+.step-desc,
+.adv-desc,
+.service-desc,
+.promise-text p,
+.form-left p,
+.intro-text p {
+  line-height: 1.72;
+}
+
+@media (max-width: 960px) {
+  .nav-logo-sub {
+    letter-spacing: 0.08em !important;
+  }
+
+  .nav-links > a,
+  .dd-item,
+  .footer-bottom-links a {
+    text-align: center;
+  }
+
+  .hero-sub,
+  .section-lead,
+  .footer-desc,
+  .fci-text,
+  .ci-note,
+  .ci-val,
+  .adv-desc,
+  .service-desc,
+  .promise-text p,
+  .step-desc,
+  .info-text span,
+  .intro-text p,
+  .form-left p {
+    font-size: clamp(0.84rem, 3.4vw, 0.96rem) !important;
+  }
+
+  .hero-actions,
+  .cta-bar,
+  .svc-cta-row,
+  .footer-bottom,
+  .footer-main {
+    align-items: stretch;
+  }
+
+  .compare-table th,
+  .compare-table td {
+    padding: 14px 12px !important;
+    font-size: 0.8rem !important;
+  }
+}
+
+@media (max-width: 560px) {
+  .nav-logo-main {
+    letter-spacing: 0.1em !important;
+  }
+
+  .hero-h1,
+  .about-hero-title,
+  .hero-title,
+  .section-h2,
+  .hq-title,
+  .form-left h2 {
+    overflow-wrap: anywhere;
+  }
+
+  .hero-focus,
+  .hero-notes,
+  .about-hero-notes,
+  .svc-tags,
+  .intro-badge-row {
+    gap: 8px !important;
+  }
+
+  .focus-chip,
+  .hero-note,
+  .about-hero-note,
+  .stag,
+  .intro-badge {
+    max-width: 100%;
+    white-space: normal;
+    text-align: center;
+  }
+
+  .map-info {
+    padding: 12px !important;
+  }
+}
